@@ -1,38 +1,101 @@
+/* ~COLOR VARIABLES */
+:root {
+  --accent-color: #0cba58;
+  --text-color: white;
+  --body-dark: #14141e;
+  --body-light: #1c1b29;
+}
+
+/* ~KEYFRAME VARIABLES */
+:root {
+  --title-slide-time: 1s;
+  --descriptors-fade-in-time: 2s;
+}
+
+/* ~NAVBAR */
+
+#navbar-container {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.507);
+  z-index: 1;
+}
+.item-container {
+  width: 40%;
+  margin: 0 5em 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-item {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0.5em;
+  color: var(--text-color);
+}
+
+/* ~BANNER */
 .App {
-  text-align: center;
+  height: 200vh;
+}
+#banner-container {
+  width: 100%;
+  height: 40vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.banner-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-color);
+  position: absolute;
+  top: 25%;
+  left: 10em;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.banner-title {
+  font-size: 4em;
+  margin-bottom: 0.2em;
+  animation: slide-left-right ease var(--title-slide-time);
+  -webkit-animation: slide-left-right ease var(--title-slide-time);
+  -moz-animation: slide-left-right ease var(--title-slide-time);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.descriptors {
+  opacity: 0%;
+  top: 100%;
+  position: absolute;
+  padding: 0.5em 1em;
+  background-color: var(--accent-color);
+  /* have descriptors fade in */
+  animation: fadeIn ease var(--descriptors-fade-in-time);
+  -webkit-animation: fadeIn ease var(--descriptors-fade-in-time);
+  -moz-animation: fadeIn ease var(--descriptors-fade-in-time);
+  /* delay animation */
+  animation-delay: var(--title-slide-time);
+  -webkit-animation-delay: var(--title-slide-time);
+  -moz-animation-delay: var(--title-slide-time);
+  /* maintain animation styles after completion*/
+  animation-fill-mode: forwards;
+  -webkit-fill-mode: forwards;
+  -moz-fill-mode: forwards;
+}
+
+@keyframes slide-left-right {
+  0% {transform: translateX(-1000px);}
+  100% {transform: translateX(0px);}
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
