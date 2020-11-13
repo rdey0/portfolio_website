@@ -1,5 +1,5 @@
 import React from 'react'
-import background_image from '../images/BLACK_II.jpg'
+import background_image from '../images/BLACK_II_LARGE.jpg'
 import { ParallaxBanner } from 'react-scroll-parallax';
 export default function Banner(props){
     return(
@@ -13,12 +13,12 @@ export default function Banner(props){
                     }
                 ]}
                 style={{
-                    height: '55vh',
+                    height: '100vh',
                 }}
             >
                 <div className='banner-content'>
                     <h1 className='banner-title'>Hi, I'm Roy Dey</h1>
-                    <div className='descriptors'>Full Stack Developer/ Designer/ Other Horseshit</div>
+                    <div className='descriptors'>Full Stack Developer / Designer / Other Horseshit</div>
                 </div>
                 
             </ParallaxBanner>

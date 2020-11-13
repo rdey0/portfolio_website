@@ -2,24 +2,63 @@
 :root {
   --accent-color: #0cba58;
   --text-color: white;
+  --secondary-text-color: #979799;
   --body-dark: #14141e;
   --body-light: #1c1b29;
+}
+
+/* ~SIZE VARIABLES */
+:root {
+  --max-subsection-width: 80vw;
+  --project-card-width: 24.6vw;
+  --project-car-height: 28vh;
+  --project-card-margin: 0 1vw 2vw 1vw;
 }
 
 /* ~KEYFRAME VARIABLES */
 :root {
   --title-slide-time: 1s;
   --descriptors-fade-in-time: 2s;
+  --navbar-fade-in-delay: 2s;
+  --navbar-fade-in-time: 2s;
+}
+
+/* ~GENERAL PAGE STYLES */
+
+.section {
+  height: 100vh;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3em;
+  color: var(--text-color);
+  margin: 0;
+  padding: 1em;
 }
 
 /* ~NAVBAR */
 
 #navbar-container {
+  opacity: 0%;
   width: 100%;
   background-color: transparent;
   position: fixed;
   border-bottom: solid 1px rgba(255, 255, 255, 0.507);
   z-index: 1;
+
+  /* have descriptors fade in */
+  animation: fadeIn ease var(--navbar-fade-in-time);
+  -webkit-animation: fadeIn ease var(--navbar-fade-in-time);
+  -moz-animation: fadeIn ease var(--navbar-fade-in-time);
+  /* delay animation */
+  animation-delay: var(--navbar-fade-in-delay);
+  -webkit-animation-delay: var(--navbar-fade-in-delay);
+  -moz-animation-delay: var(--navbar-fade-in-delay);
+  /* maintain animation styles after completion*/
+  animation-fill-mode: forwards;
+  -webkit-fill-mode: forwards;
+  -moz-fill-mode: forwards;
 }
 .item-container {
   width: 40%;
@@ -32,19 +71,24 @@
 
 .navbar-item {
   margin-bottom: 1em;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-weight: bold;
   cursor: pointer;
-  padding: 0.5em;
+  padding: 1em;
   color: var(--text-color);
+}
+
+.navbar-item:hover {
+  color: var(--accent-color);
+  transition: 0.5s;
 }
 
 /* ~BANNER */
 .App {
-  height: 200vh;
 }
 #banner-container {
   width: 100%;
-  height: 40vh;
+  height: 100vh;
 }
 
 .banner-content {
@@ -52,13 +96,13 @@
   flex-direction: column;
   color: var(--text-color);
   position: absolute;
-  top: 25%;
+  top: 35%;
   left: 10em;
   z-index: 1;
 }
 
 .banner-title {
-  font-size: 4em;
+  font-size: 5em;
   margin-bottom: 0.2em;
   animation: slide-left-right ease var(--title-slide-time);
   -webkit-animation: slide-left-right ease var(--title-slide-time);
@@ -66,10 +110,11 @@
 }
 
 .descriptors {
+  font-size: 1.3em;
   opacity: 0%;
   top: 100%;
   position: absolute;
-  padding: 0.5em 1em;
+  padding: 0.5em 0.8em;
   background-color: var(--accent-color);
   /* have descriptors fade in */
   animation: fadeIn ease var(--descriptors-fade-in-time);
@@ -86,7 +131,7 @@
 }
 
 @keyframes slide-left-right {
-  0% {transform: translateX(-1000px);}
+  0% {transform: translateX(-1500px);}
   100% {transform: translateX(0px);}
 }
 
@@ -98,4 +143,84 @@
 @-moz-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+
+/* ~ABOUT */
+
+#about-container {
+  background-color: var(--body-dark);
+}
+
+
+.short-description {
+  color: var(--secondary-text-color);
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* ~PORTFOLIO */
+
+#portfolio-container {
+  background-color: var(--body-light);
+}
+
+#portfolio-filters {
+  margin: 0 auto;
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+}
+
+.selected {
+  color: var(--text-color);
+}
+
+#projects-container {
+  width: var(--max-subsection-width);
+  margin: 3em auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: var(--project-card-width);
+  height: var(--project-car-height);
+  background-size: cover;
+  margin: var(--project-card-margin);
+}
+
+.project-overlay {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--accent-color);
+}
+
+.project-overlay:hover {
+  opacity: 85%;
+}
+
+.project-title {
+  color: var(--text-color);
+  font-size: 2em;
+  padding: 15% 1em;
+}
+
+
+
+/* ~CONTACT */
+
+#contact-container {
+  background-color: var(--body-dark);
 }
