@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 export default class Contact extends React.Component{
     constructor(){
         super();
@@ -71,8 +71,22 @@ export default class Contact extends React.Component{
                 <div className='button-container'>
                     <div className='button' onClick={this.handle_form_submit}>SEND MESSAGE</div>
                 </div>
-                <div id='social-links'>
-                    
+                <div className='social-links'>
+                    <div className='link-container'>
+                        <a 
+                        href={'https://github.com/rdey0'}
+                        target='_blank' 
+                        rel='noopener noreferrer' >
+                            <AiFillGithub className='social-icon'/>
+                        </a>
+                        
+                        <a 
+                        href={'https://www.linkedin.com/in/roydey/'}
+                        target='_blank' 
+                        rel='noopener noreferrer' >
+                            <AiFillLinkedin className='social-icon'/>
+                        </a>
+                    </div>
                 </div>
                 
             </div>
