@@ -19,7 +19,7 @@
 :root {
   --title-slide-time: 1s;
   --descriptors-fade-in-time: 2s;
-  --navbar-fade-in-delay: 2s;
+  --navbar-fade-in-delay: 1s;
   --navbar-fade-in-time: 2s;
 }
 
@@ -193,6 +193,8 @@
 }
 
 .project-card {
+  color: inherit; /* remove blue color */
+  text-decoration: inherit; /* no underline */
   width: var(--project-card-width);
   height: var(--project-car-height);
   background-size: cover;
@@ -204,17 +206,24 @@
   height: 100%;
   width: 100%;
   cursor: pointer;
+  background-image: url('./images/project_overlay_background.png');
+  background-size: 100% 100%;
   background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-overlay:hover {
+  transition: 0.2s;
   opacity: 85%;
 }
 
 .project-title {
+  opacity: 100%;
   color: var(--text-color);
   font-size: 2em;
-  padding: 15% 1em;
+  padding: 1em 2em;
 }
 
 

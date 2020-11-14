@@ -7,37 +7,37 @@ import panorama_img from '../images/panorama_pf.png'
 import resizer_img from '../images/image_resizer_pf.png'
 const portfolio_items = [
     {
-        name: 'Raphunt',
+        name: 'RAPHUNT',
         img_src: raphunt_img,
         link:'https://rdey0.github.io/raphunt/',
         filter_tags: ['All', 'Web Apps', 'Back End']
     },
     {
-        name: 'Connect 4 AI',
+        name: 'CONNECT 4 AI',
         img_src: connect4_img,
         link: 'https://rdey0.github.io/connect4_ai/',
         filter_tags: ['All', 'Web Apps', 'Algorithmic']
     },
     {
-        name: 'Cancer Classifier',
+        name: 'CANCER CLASSIFIER',
         img_src: cancer_img,
         link: 'https://rdey0.github.io/cancer_classifier/',
         filter_tags: ['All', 'Web Apps', 'Algorithmic', 'Back End']
     },
     {
-        name: 'Reverse Image Search Algorithm',
+        name: 'REVERSE IMAGE SEARCH',
         img_src: reverse_img,
         link: 'https://github.com/rdey0/reverse_image_search',
         filter_tags: ['All', 'Algorithmic']
     },
     {
-        name: 'Panoramic Stitcher',
+        name: 'PANORAMIC STITCHER',
         img_src: panorama_img,
         link: 'https://github.com/rdey0/panoramic_stitcher',
         filter_tags: ['All', 'Algorithmic']
     },
     {
-        name: 'Image Resizer',
+        name: 'IMAGE RESIZER',
         img_src: resizer_img,
         link: 'https://github.com/rdey0/image_resizer',
         filter_tags: ['All', 'Algorithmic']
@@ -84,11 +84,15 @@ export default class Portfolio extends React.Component {
                             .filter((project)=>(project.filter_tags.includes(this.state.filters[this.state.selected_filter])))
                             .map( (project,index)=>{
                                 return(
-                                    <div key={index} className='project-card' style={{backgroundImage: 'url(' + project.img_src + ')'}}>
+                                    <a key={index} className='project-card'
+                                    href={project.link}
+                                    target='_blank' 
+                                    rel='noopener noreferrer' 
+                                    style={{backgroundImage: 'url(' + project.img_src + ')'}}>
                                         <div className='project-overlay'>
                                             <div className='project-title'>{project.name}</div>
                                         </div>
-                                    </div>
+                                    </a>
                                 )
                         })
                     }
