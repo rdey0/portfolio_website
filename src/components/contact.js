@@ -68,7 +68,7 @@ export default class Contact extends React.Component{
                     <div className='personal-info-item'>
                         <MdLocationOn className='info-icon'/>
                         <div className='info-title'>LOCATION</div>
-                        <div className='info-content'>San Jose, CA</div>
+                        <div className='info-content'>San Jose, CA 95129</div>
                     </div>
                     <div className='personal-info-item'>
                         <MdEmail className='info-icon'/>

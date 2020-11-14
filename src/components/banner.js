@@ -18,7 +18,10 @@ export default function Banner(props){
             >
                 <div className='home-content'>
                     <h1 className='home-title'>Hi, I'm Roy Dey</h1>
-                    <div className='descriptors'>Full Stack Developer / Designer / Other Horseshit</div>
+                    <div className='descriptors-container'>
+                        <div className='descriptors'>Full Stack Developer / Designer / Percocet Addict</div>
+                    </div>
+                    
                 </div>
                 
             </ParallaxBanner>
