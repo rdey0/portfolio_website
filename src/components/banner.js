@@ -3,9 +3,9 @@ import background_image from '../images/BLACK_II_LARGE.jpg'
 import { ParallaxBanner } from 'react-scroll-parallax';
 export default function Banner(props){
     return(
-        <div id='banner-container' className='parallax'>
+        <div id='home-container' className='parallax'>
             <ParallaxBanner
-                className='banner-image'
+                className='home-image'
                 layers={[
                     {
                         image: background_image,
@@ -16,8 +16,8 @@ export default function Banner(props){
                     height: '100vh',
                 }}
             >
-                <div className='banner-content'>
-                    <h1 className='banner-title'>Hi, I'm Roy Dey</h1>
+                <div className='home-content'>
+                    <h1 className='home-title'>Hi, I'm Roy Dey</h1>
                     <div className='descriptors'>Full Stack Developer / Designer / Other Horseshit</div>
                 </div>
                 

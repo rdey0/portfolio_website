@@ -1,6 +1,7 @@
 /* ~COLOR VARIABLES */
 :root {
   --accent-color: #0cba58;
+  --accent-color-highlight: #16cf66;
   --text-color: white;
   --secondary-text-color: #979799;
   --body-dark: #14141e;
@@ -11,7 +12,7 @@
 :root {
   --max-subsection-width: 80vw;
   --project-card-width: 24.6vw;
-  --project-car-height: 28vh;
+  --project-car-height: 27vh;
   --project-card-margin: 0 1vw 2vw 1vw;
 }
 
@@ -34,7 +35,8 @@
   font-size: 3em;
   color: var(--text-color);
   margin: 0;
-  padding: 1em;
+  padding: 1em 0 0.5em 0;
+  padding-top: 10vh;
 }
 
 /* ~NAVBAR */
@@ -70,8 +72,7 @@
 }
 
 .navbar-item {
-  margin-bottom: 1em;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: bold;
   cursor: pointer;
   padding: 1em;
@@ -86,12 +87,12 @@
 /* ~BANNER */
 .App {
 }
-#banner-container {
+#home-container {
   width: 100%;
   height: 100vh;
 }
 
-.banner-content {
+.home-content {
   display: flex;
   flex-direction: column;
   color: var(--text-color);
@@ -101,7 +102,7 @@
   z-index: 1;
 }
 
-.banner-title {
+.home-title {
   font-size: 5em;
   margin-bottom: 0.2em;
   animation: slide-left-right ease var(--title-slide-time);
@@ -232,4 +233,68 @@
 
 #contact-container {
   background-color: var(--body-dark);
+  position: relative;
+}
+
+#user-info-container {
+  margin: 0 auto;
+  margin-bottom: 3vh;
+  width: var(--max-subsection-width);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.input {
+  /*get rid of any default styles*/
+  border: none;
+  box-shadow : none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: var(--body-light);
+  color: var(--text-color);
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.input-field-small {
+  width: 30%;
+  height: 5vh;
+}
+
+.input-field-large {
+  width: var(--max-subsection-width);
+  height: 20vh;
+  margin-bottom: 3vh;
+}
+
+.button-container {
+  width: var(--max-subsection-width);
+  margin: 0 auto;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 1vw;
+  width: 8.5vw;
+  height: 5vh;
+  line-height: 5vh;
+  color: white;
+  background-color:  var(--accent-color);
+  margin: 0 0 0 auto;
+}
+
+.button:hover {
+  background-color: var(--accent-color-highlight);
+}
+
+#social-links {
+  width: 100%;
+  height: 10vh;
+  background-color: var(--body-light);
+  position: absolute;
+  bottom: 0;
 }
