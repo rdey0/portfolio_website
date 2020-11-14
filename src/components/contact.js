@@ -1,5 +1,6 @@
 import React from 'react';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
+import {MdLocationOn, MdEmail, MdSmartphone} from 'react-icons/md'
 export default class Contact extends React.Component{
     constructor(){
         super();
@@ -62,6 +63,25 @@ export default class Contact extends React.Component{
         return(
             <div id='contact-container' className='section'>
                 <h1 className='section-title'>Contact</h1>
+
+                <div id='personal-info-container'>
+                    <div className='personal-info-item'>
+                        <MdLocationOn className='info-icon'/>
+                        <div className='info-title'>LOCATION</div>
+                        <div className='info-content'>San Jose, CA</div>
+                    </div>
+                    <div className='personal-info-item'>
+                        <MdEmail className='info-icon'/>
+                        <div className='info-title'>EMAIL</div>
+                        <div className='info-content'>roydey10@gmail.com</div>
+                    </div>
+                    <div className='personal-info-item'>
+                        <MdSmartphone className='info-icon'/>
+                        <div className='info-title'>PHONE NUMBER</div>
+                        <div className='info-content'>(408) 413-7941</div>
+                    </div>
+                </div>
+
                 <div id='user-info-container'>
                     <input id='name' placeholder='Name*' value={this.state.name} onChange={this.handle_field_change} className='input-field-small input'></input>
                     <input id='email' placeholder='Email*' value={this.state.email}  onChange={this.handle_field_change}  className='input-field-small input'></input>

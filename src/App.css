@@ -236,6 +236,32 @@
   position: relative;
 }
 
+#personal-info-container {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+
+.info-icon {
+  color: var(--accent-color);
+  height: 5vh;
+  width: 5vh;
+}
+
+.info-title {
+  color: var(--text-color);
+}
+
+.info-content {
+  color: var(--secondary-text-color);
+}
+.personal-info-item {
+
+}
+
 #user-info-container {
   margin: 0 auto;
   margin-bottom: 3vh;
