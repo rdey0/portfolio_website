@@ -16,7 +16,7 @@ export default function Banner(props){
                     height: '100vh',
                 }}
             >
-                <div className='home-content'>
+                <div className='home-content no-interaction'>
                     <h1 className='home-title'>Hi, I'm Roy Dey</h1>
                     <div className='descriptors-container'>
                         <div className='descriptors'>Full Stack Developer / Designer / Percocet Addict</div>

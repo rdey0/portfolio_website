@@ -48,7 +48,6 @@ export default class Contact extends React.Component{
             this.setState({
                 name: '',
                 email: '',
-                phone_number: '',
                 message: ''
             });
         }else{
@@ -62,35 +61,43 @@ export default class Contact extends React.Component{
     render(){
         return(
             <div id='contact-container' className='section'>
-                <h1 className='section-title'>Contact</h1>
+                <h1 className='section-title'>CONTACT</h1>
+                <div id='contact-body'>
+                    <div id='user-info-container'>
+                        <input id='name' placeholder='Name*' value={this.state.name} onChange={this.handle_field_change} className='input-field-small input'></input>
+                        <input id='email' placeholder='Email*' value={this.state.email}  onChange={this.handle_field_change}  className='input-field-small input'></input>
+                        <textarea id='message' placeholder='Message*' value={this.state.message}  onChange={this.handle_field_change}  className='input-field-large input'></textarea>
+                        <div className='button-container'>
+                            <div className='button' onClick={this.handle_form_submit}>SEND MESSAGE</div>
+                        </div>
+                    </div>
+                    
 
-                <div id='personal-info-container'>
-                    <div className='personal-info-item'>
-                        <MdLocationOn className='info-icon'/>
-                        <div className='info-title'>LOCATION</div>
-                        <div className='info-content'>San Jose, CA 95129</div>
-                    </div>
-                    <div className='personal-info-item'>
-                        <MdEmail className='info-icon'/>
-                        <div className='info-title'>EMAIL</div>
-                        <div className='info-content'>roydey10@gmail.com</div>
-                    </div>
-                    <div className='personal-info-item'>
-                        <MdSmartphone className='info-icon'/>
-                        <div className='info-title'>PHONE NUMBER</div>
-                        <div className='info-content'>(408) 413-7941</div>
+                    <div id='personal-info-container'>
+                        <div className='personal-info-item'>
+                            <div className='info-title-container'>
+                                <MdLocationOn className='info-icon'/>
+                                <div className='info-title no-interaction'>LOCATION</div> 
+                            </div>
+                            <div className='info-content'>San Jose, CA 95129</div>
+                        </div>
+                        <div className='personal-info-item'>
+                            <div className='info-title-container'>
+                                <MdEmail className='info-icon'/>
+                                <div className='info-title no-interaction'>EMAIL</div>
+                            </div>
+                            <div className='info-content'>roydey10@gmail.com</div>
+                        </div>
+                        <div className='personal-info-item no-border-bottom'>
+                            <div className='info-title-container'>
+                                <MdSmartphone className='info-icon'/>
+                                <div className='info-title no-interaction'>PHONE NUMBER</div>
+                            </div>
+                            <div className='info-content'>(408) 413-7941</div>
+                        </div>
                     </div>
                 </div>
-
-                <div id='user-info-container'>
-                    <input id='name' placeholder='Name*' value={this.state.name} onChange={this.handle_field_change} className='input-field-small input'></input>
-                    <input id='email' placeholder='Email*' value={this.state.email}  onChange={this.handle_field_change}  className='input-field-small input'></input>
-                    <input id='phone' placeholder='Phone Number' value={this.state.phone_number} onChange={this.handle_field_change}  className='input-field-small input'></input>
-                </div>
-                <textarea id='message' placeholder='Message*' value={this.state.message}  onChange={this.handle_field_change}  className='input-field-large input'></textarea>
-                <div className='button-container'>
-                    <div className='button' onClick={this.handle_form_submit}>SEND MESSAGE</div>
-                </div>
+                
                 <div className='social-links'>
                     <div className='link-container'>
                         <a 

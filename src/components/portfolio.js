@@ -64,7 +64,7 @@ export default class Portfolio extends React.Component {
         return(
             <div id='portfolio-container' className='section'>
                 <h1 className='section-title'>PORTFOLIO</h1>
-                <div id='portfolio-filters'>
+                <div id='portfolio-filters' className='no-interaction'>
                     {
                         this.state.filters.map((filter,index)=>{
                             if(index == this.state.selected_filter){
