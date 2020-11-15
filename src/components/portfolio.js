@@ -38,14 +38,14 @@ const portfolio_items = [
     },
     {
         name: 'PANORAMIC STITCHER',
-        description: 'Creates a panoramic photo when given a set of overlapping images',
+        description: 'Creates a panoramic, angle corrected photo using a set of overlapping images',
         img_src: panorama_img,
         link: 'https://github.com/rdey0/panoramic_stitcher',
         filter_tags: ['ALL', 'ALGORITHMIC']
     },
     {
         name: 'IMAGE RESIZER',
-        description: 'Uses a seam carving algorithm to resize images without loss of key features',
+        description: 'A seam carving algorithm which resizes images without loss of key features',
         img_src: resizer_img,
         link: 'https://github.com/rdey0/image_resizer',
         filter_tags: ['ALL', 'ALGORITHMIC']

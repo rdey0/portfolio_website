@@ -99,6 +99,7 @@ export default class Contact extends React.Component{
                 </div>
                 
                 <div className='social-links'>
+                    
                     <div className='link-container'>
                         <a 
                         href={'https://github.com/rdey0'}
