@@ -199,6 +199,7 @@
   width: var(--max-subsection-width);
   height: 50vh;
   background-color: var(--body-light);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 #profile-pic {
@@ -235,16 +236,16 @@
 }
 
 #projects-container {
+  height: 60vh;
   width: var(--max-subsection-width);
   margin: 2em auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .project-card {
-  color: inherit; /* remove blue color */
-  text-decoration: inherit; /* no underline */
   width: var(--project-card-width);
   height: var(--project-car-height);
   background-size: cover;
@@ -252,6 +253,11 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 3px;
   overflow: hidden;
+}
+
+.project-card a {
+  color: inherit; /* remove blue color */
+  text-decoration: inherit; /* no underline */
 }
 
 .project-overlay {
@@ -263,6 +269,7 @@
   background-size: 100% 100%;
   background-color: var(--accent-color);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -273,14 +280,27 @@
 }
 
 .project-title {
-  opacity: 100%;
+  width: 20vw;
+  opacity: 1;
   color: var(--text-color);
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 500;
-  padding: 1em 2em;
 }
 
+.project-description {
+  opacity: 0%;
+  width: 15vw;
+  color: var(--text-color);
 
+  animation-fill-mode: forwards;
+  -webkit-fill-mode: forwards;
+  -moz-fill-mode: forwards;
+}
+
+@keyframes slide-project-title-up {
+  0% {transform: translateY(5vh);}
+  100% {transform: translateY(0);}
+}
 
 /* ~CONTACT */
 #contact-container {
@@ -385,14 +405,15 @@
 
 .button {
   cursor: pointer;
-  font-size: 1vw;
+  font-size: 0.8vw;
   font-weight: 500;
-  width: 8.5vw;
+  width: 8vw;
   height: 5vh;
   line-height: 5vh;
   color: white;
   background-color:  var(--accent-color);
   margin: 0 0 0 auto;
+  border-radius: 3px;
 }
 
 .button:hover {
