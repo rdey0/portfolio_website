@@ -19,7 +19,14 @@ const particle_params = {
             blur: 0,
             color: "#000000",
             enable: true
-        }
+        },
+        "size": {
+            random:{
+                enable: true,
+                minimumValue: 5,
+            }
+        },
+        "value":10
     },
     "interactivity": {
         "events": {
@@ -29,11 +36,13 @@ const particle_params = {
             },
             "onhover": {
                 "enable": true,
-                "mode": "repulse",
-                "parallax":{
-                    "enable":true,
-                    "force": 5,
-                    "smooth": 500
+                "mode": "repulse"
+            },
+            "modes":{
+                "repulse":{
+                    distance: 20000,
+                    duration: 0.4,
+                    speed: 1
                 }
             }
         }
@@ -43,7 +52,7 @@ const particle_params = {
 export default function Banner(props){
     return(
         <div id='home-container'> 
-            <Particles id='particle-layer' width='110vw' height='110vh' params={particle_params}/>
+            <Particles id='particle-layer' width='100vw' height='100vh' params={particle_params}/>
             <div className='home-content no-interaction'>
                 <h1 className='home-title'>Hi, I'm Roy Dey</h1>
                 <div className='descriptors-container'>

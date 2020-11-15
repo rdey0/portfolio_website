@@ -14,15 +14,13 @@ window.onbeforeunload = function () {
 
 function App() {
   return (
-    <ParallaxProvider>
-      <div className="App">
-        <NavBar/>
-        <Banner/>
-        <About/>
-        <Portfolio/>
-        <Contact/>
-      </div>
-    </ParallaxProvider>
+    <div className="App">
+      <NavBar/>
+      <Banner/>
+      <About/>
+      <Portfolio/>
+      <Contact/>
+    </div>
   );
 }
 
