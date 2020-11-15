@@ -38,7 +38,7 @@ const portfolio_items = [
     },
     {
         name: 'PANORAMIC STITCHER',
-        description: 'Creates a panoramic, perspective adjusted photo when given a set of overlapping images',
+        description: 'Creates a panoramic photo when given a set of overlapping images',
         img_src: panorama_img,
         link: 'https://github.com/rdey0/panoramic_stitcher',
         filter_tags: ['ALL', 'ALGORITHMIC']
