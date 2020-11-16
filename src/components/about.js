@@ -1,5 +1,6 @@
 import React from 'react';
 import me from '../images/me.png'
+import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 export default function About() {
     return(
         <div id='about-container' className='section'>
@@ -39,7 +40,21 @@ export default function About() {
                         </div>
                         <div className='about-info-item'>
                             <div className='about-info-title'>Socials:</div>
-                            <div className='about-info-content'>Roy Dey</div>
+                            <div className='about-info-content'>
+                                <a 
+                                href={'https://github.com/rdey0'}
+                                target='_blank' 
+                                rel='noopener noreferrer' >
+                                    <AiFillGithub className='social-icon'/>
+                                </a>
+                                
+                                <a 
+                                href={'https://www.linkedin.com/in/roydey/'}
+                                target='_blank' 
+                                rel='noopener noreferrer' >
+                                    <AiFillLinkedin className='social-icon'/>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

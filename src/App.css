@@ -626,7 +626,7 @@
   width: 40vw;
   margin-bottom: 1vh;
   margin-right: 5vw;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .input-field-small {
@@ -677,8 +677,8 @@
 .social-icon {
   cursor: pointer;
   color: white;
-  height: 5vh;
-  width: 5vh;
+  height: 3.5vh;
+  width: 3.5vh;
   margin-right: 2em;
 }
 
