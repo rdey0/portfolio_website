@@ -398,6 +398,21 @@
   border-radius: 5px;
 }
 
+.knowledge-item:hover {
+  background-color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.knowledge-item:hover > .knowledge-header > .knowledge-icon{
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.knowledge-item:hover > .knowledge-description{
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
 .knowledge-header {
   display: flex;
   flex-direction: row;
@@ -417,12 +432,9 @@
 }
 
 .knowledge-description {
- 
   padding: 0 1vw 0 8vh;
   color: var(--secondary-text-color);
 }
-
-
 /* ~PORTFOLIO */
 
 #portfolio-container {
