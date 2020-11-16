@@ -351,14 +351,19 @@
 .skill-icon {
   color: var(--text-color);
   background-color: var(--body-dark);
-  height: 10vh;
-  width: 10vh;
-  padding: 2vh;
+  height: 5vw;
+  width: 5vw;
+  padding: 1vw;
   border-radius: 100%;
   margin-bottom: 1vh;
 }
 
 .skill-icon:hover {
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.skill-icon:hover + .skill-name{
   color: var(--accent-color);
   transition: 0.3s;
 }

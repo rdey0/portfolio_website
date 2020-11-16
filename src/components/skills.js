@@ -57,45 +57,52 @@ const knowledge_items = [
 ];
 
 
-export default function Skills() { 
-    return (
-        <div id='skills-container' className='section'>
-            <div id='skills-section'>
-                <h1 className='section-title-alt'>SKILLS</h1>
-                <div id='skills'>
-                    {
-                        skill_items.map((skill, index)=>{
-                            var Icon = skill_items[index].icon;
-                            return(
-                                <div className='skill-item'>
-                                    <Icon className='skill-icon'/>
-                                    <div className='skill-name'>{skill.name}</div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            </div>
+export default class Skills extends React.Component {
+    constructor() {
+        super()
+    }
 
-            <div id='knowledge-section'>
-                <h1 className='section-title-alt'>KNOWLEDGE</h1>
-                <div id='knowledge'>
-                    {
-                        knowledge_items.map((knowledge, index)=>{
-                            var Icon = knowledge.icon;
-                            return(
-                                <div className='knowledge-item'>
-                                    <div className='knowledge-header'>
-                                        <Icon className='knowledge-icon'/>
-                                        <div className='knowledge-title'>{knowledge.name}</div>
+    render(){
+        return (
+            <div id='skills-container' className='section'>
+                <div id='skills-section'>
+                    <h1 className='section-title-alt'>SKILLS</h1>
+                    <div id='skills'>
+                        {
+                            skill_items.map((skill, index)=>{
+                                var Icon = skill_items[index].icon;
+                                return(
+                                    <div key={index} className='skill-item'>
+                                        <Icon className='skill-icon'/>
+                                        <div className='skill-name'>{skill.name}</div>
                                     </div>
-                                    <div className='knowledge-description'>{knowledge.description}</div>
-                                </div>
-                            )
-                        })
-                    }
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+    
+                <div id='knowledge-section'>
+                    <h1 className='section-title-alt'>KNOWLEDGE</h1>
+                    <div id='knowledge'>
+                        {
+                            knowledge_items.map((knowledge, index)=>{
+                                var Icon = knowledge.icon;
+                                return(
+                                    <div key={index} className='knowledge-item'>
+                                        <div className='knowledge-header'>
+                                            <Icon className='knowledge-icon' />
+                                            <div className='knowledge-title'>{knowledge.name}</div>
+                                        </div>
+                                        <div className='knowledge-description'>{knowledge.description}</div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
+    
 }
