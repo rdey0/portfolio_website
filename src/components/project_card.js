@@ -11,11 +11,11 @@ export default class ProjectCard extends React.Component {
             console.log('mouse enter');
             var project_title = event.target.children[0];
             var project_description = event.target.children[1];
-            project_title.style.animation = 'slide-project-title-up 0.4s ease';
-            project_description.style.cssText = "animation: fadeIn 0.5s ease 0.4s;" +
-                "animation-fill-mode: forwards;" +
-                "-webkit-fill-mode: forwards;" +
-                "-moz-fill-mode: forwards;";
+            project_title.style.animation = 'fadeIn ease 0.4s, slide-project-title-up 0.4s ease';
+            project_description.style.cssText = `animation: fadeIn 0.5s ease 0.4s;
+                animation-fill-mode: forwards;
+                -webkit-fill-mode: forwards;
+                -moz-fill-mode: forwards;`
             console.log('mouse finish enter');
         }
     }
