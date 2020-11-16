@@ -17,8 +17,8 @@
 /* ~SIZE VARIABLES */
 :root {
   --max-subsection-width: 80vw;
-  --project-card-width: 25vw;
-  --project-car-height: 28vh;
+  --project-card-width: 25.3vw;
+  --project-car-height: 30vh;
   --project-card-margin: 0 0.5vw 1vw 0.5vw;
   
   /*
@@ -256,7 +256,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 10vh 0;
+  padding: 7vh 0;
 }
 
 #about-body {
@@ -301,6 +301,19 @@
   height: 10vw;
   width: 10vw;
   margin: 0 2vw 0 10vw;
+}
+
+.about-social-icon {
+  cursor: pointer;
+  color: white;
+  height: 3.5vh;
+  width: 3.5vh;
+  margin-right: 2em;
+}
+
+.about-social-icon:hover {
+  color: var(--accent-color);
+  transition: 0.3s;
 }
 
 /* ~SKILLS */
@@ -402,8 +415,9 @@
   background-color: var(--accent-color);
   transition: 0.3s;
 }
-
+/*rotate knowledge icon 360 and turn white*/
 .knowledge-item:hover > .knowledge-header > .knowledge-icon{
+  animation: rotate-360 ease 0.7s;
   color: var(--text-color);
   transition: 0.3s;
 }
@@ -411,6 +425,16 @@
 .knowledge-item:hover > .knowledge-description{
   color: var(--text-color);
   transition: 0.3s;
+}
+
+@keyframes rotate-360 {
+  0%{transform: rotateY(0deg);}
+  100%{transform: rotateY(360deg);}
+}
+
+@-moz-keyframes rotate-360 {
+  0%{transform: rotateY(0deg);}
+  100%{transform: rotateY(360deg);}
 }
 
 .knowledge-header {
@@ -435,6 +459,7 @@
   padding: 0 1vw 0 8vh;
   color: var(--secondary-text-color);
 }
+
 /* ~PORTFOLIO */
 
 #portfolio-container {
@@ -464,29 +489,34 @@
 
 .selected {
   color: var(--accent-color);
-  border-bottom: solid 2px var(--accent-color);
+
 }
 
 .selected:hover {
   color: var(--accent-color);
-  border-bottom: solid 2px var(--accent-color);
+
 }
 
 #projects-container {
   height: 60vh;
   width: var(--max-subsection-width);
-  margin: 2em auto;
-  display: flex;
+  margin: 3vh auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1vw;
+  grid-row-gap: 1vw;
+  /*display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   overflow: hidden;
+  */
 }
 
 .project-card {
-  width: var(--project-card-width);
+  /*width: var(--project-card-width);*/
   height: var(--project-car-height);
   background-size: cover;
-  margin: var(--project-card-margin);
+  /*margin: var(--project-card-margin);*/
   box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 3px;
   overflow: hidden;
@@ -677,8 +707,8 @@
 .social-icon {
   cursor: pointer;
   color: white;
-  height: 3.5vh;
-  width: 3.5vh;
+  height: 5vh;
+  width: 5vh;
   margin-right: 2em;
 }
 

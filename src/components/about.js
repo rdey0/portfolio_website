@@ -45,14 +45,14 @@ export default function About() {
                                 href={'https://github.com/rdey0'}
                                 target='_blank' 
                                 rel='noopener noreferrer' >
-                                    <AiFillGithub className='social-icon'/>
+                                    <AiFillGithub className='about-social-icon'/>
                                 </a>
                                 
                                 <a 
                                 href={'https://www.linkedin.com/in/roydey/'}
                                 target='_blank' 
                                 rel='noopener noreferrer' >
-                                    <AiFillLinkedin className='social-icon'/>
+                                    <AiFillLinkedin className='about-social-icon'/>
                                 </a>
                             </div>
                         </div>

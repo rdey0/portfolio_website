@@ -93,7 +93,7 @@ export default class Contact extends React.Component{
                                 <MdSmartphone className='info-icon'/>
                                 <div className='info-title no-interaction'>PHONE NUMBER</div>
                             </div>
-                            <div className='info-content'>(408) 413-7941</div>
+                            <div className='info-content'>+1 (408) 413-7941</div>
                         </div>
                     </div>
                 </div>
