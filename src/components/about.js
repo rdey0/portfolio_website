@@ -2,6 +2,7 @@ import React from 'react';
 import me from '../images/me.png'
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 export default function About() {
+    
     return(
         <div id='about-container' className='section'>
             <h1 className='section-title'>ABOUT ME</h1>

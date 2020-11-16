@@ -37,6 +37,11 @@
 }
 
 /* ~GENERAL PAGE STYLES */
+
+.fade-in-slide-up {
+  animation: fadeIn ease 0.4s, slide-up 0.4s ease;
+}
+
 .App, body, #root {
   position: relative;
   z-index: -1;
@@ -541,10 +546,22 @@
   align-items: center;
 }
 
-.project-overlay:hover {
+.project-overlay:hover{
   transition: 0.2s;
   opacity: 85%;
 }
+
+.project-overlay:hover > .project-title{
+  animation: fadeIn ease 0.4s, slide-up 0.4s ease;
+}
+
+.project-overlay:hover > .project-description{
+  animation: fadeIn 0.4s ease 0.3s;
+  animation-fill-mode: forwards;
+  -webkit-fill-mode: forwards;
+  -moz-fill-mode: forwards;
+}
+
 
 .project-title {
   width: 20vw;
@@ -559,15 +576,14 @@
   width: 15vw;
   color: var(--text-color);
   font-size: 1.1rem;
-  animation-fill-mode: forwards;
-  -webkit-fill-mode: forwards;
-  -moz-fill-mode: forwards;
+  
 }
 
-@keyframes slide-project-title-up {
+@keyframes slide-up {
   0% {transform: translateY(5vh);}
   100% {transform: translateY(0);}
 }
+
 
 /* ~CONTACT */
 #contact-container {
