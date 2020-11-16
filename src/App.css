@@ -91,9 +91,9 @@
   z-index: 1000;
   transition: top 0.3s;
   /* have descriptors fade in */
-  animation: slide-navbar-down ease var(--navbar-animation-time);
-  -webkit-animation: slide-navbar-down ease var(--navbar-animation-time);
-  -moz-animation: slide-navbar-down ease var(--navbar-animation-time);
+  animation: fadeIn ease 2s, slide-navbar-down ease var(--navbar-animation-time);
+  -webkit-animation: fadeIn ease 2s, slide-navbar-down ease var(--navbar-animation-time);
+  -moz-animation: fadeIn ease 2s, slide-navbar-down ease var(--navbar-animation-time);
   /* delay animation */
   animation-delay: var(--navbar-animation-delay);
   -webkit-animation-delay: var(--navbar-animation-delay);
@@ -158,9 +158,9 @@
 .home-title {
   font-size: 5em;
   margin-bottom: 0.2em;
-  animation: slide-left-right ease var(--title-slide-time);
-  -webkit-animation: slide-left-right ease var(--title-slide-time);
-  -moz-animation: slide-left-right ease var(--title-slide-time);
+  animation: fadeIn ease 1.2s, slide-left-right ease var(--title-slide-time);
+  -webkit-animation: fadeIn ease 1.2s, slide-left-right ease var(--title-slide-time);
+  -moz-animation: fadeIn ease 1.2s, slide-left-right ease var(--title-slide-time);
 }
 
 .descriptors-container {
@@ -176,9 +176,9 @@
   background-color: var(--accent-color);
   transform: translateX(1000px);
   /* have descriptors fade in */
-  animation: slide-bottom-up ease var(--descriptors-fade-in-time);
-  -webkit-animation: slide-bottom-up ease var(--descriptors-fade-in-time);
-  -moz-animation: slide-bottom-up ease var(--descriptors-fade-in-time);
+  animation: fadeIn ease 2s, slide-bottom-up ease var(--descriptors-fade-in-time);
+  -webkit-animation: fadeIn ease 2s, slide-bottom-up ease var(--descriptors-fade-in-time);
+  -moz-animation: fadeIn ease 2s, slide-bottom-up ease var(--descriptors-fade-in-time);
   /* delay animation */
   animation-delay: var(--title-slide-time);
   -webkit-animation-delay: var(--title-slide-time);
@@ -390,6 +390,7 @@
   background-color: var(--body-light);
   padding: 2vh 2vh 4vh 2vh;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .knowledge-header {

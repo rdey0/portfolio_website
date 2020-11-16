@@ -1,6 +1,5 @@
 import React from 'react'
-import background_image from '../images/BLACK_II_LARGE.jpg'
-import { ParallaxBanner } from 'react-scroll-parallax';
+import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import Particles from 'react-particles-js'
 
 
