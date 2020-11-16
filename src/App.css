@@ -46,9 +46,15 @@
 .section {
   height: 100vh;
   text-align: center;
-  
 }
 
+.primary-text {
+  color: var(--text-color);
+}
+
+.secondary-text {
+  color: var(--secondary-text-color);
+}
 
 .section-title {
   font-size: 3em;
@@ -221,7 +227,7 @@
 
 
 #about-header-container {
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
 }
 
 .short-description {
@@ -296,6 +302,120 @@
   width: 10vw;
   margin: 0 2vw 0 10vw;
 }
+
+/* ~SKILLS */
+#skills-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#skills-section {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--body-light);
+}
+
+.section-title-alt {
+  text-align: left;
+  font-size: 3em;
+  padding-top: 5vh;
+  color: var(--text-color);
+  margin: 0 0 5vh 10vw;
+  user-select: none; /* Non-prefixed version, currently*/
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+#skills {
+  width: var(--max-subsection-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skill-item:hover {
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.skill-icon {
+  color: var(--text-color);
+  background-color: var(--body-dark);
+  height: 10vh;
+  width: 10vh;
+  padding: 2vh;
+  border-radius: 100%;
+  margin-bottom: 1vh;
+}
+
+.skill-icon:hover {
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+
+/* ~KNOWLEDGE */
+
+#knowledge-section {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--body-dark);
+}
+
+#knowledge {
+  width: var(--max-subsection-width);
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.knowledge-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25vw;
+  background-color: var(--body-light);
+  padding: 2vh 2vh 4vh 2vh;
+  box-sizing: border-box;
+}
+
+.knowledge-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.knowledge-title {
+  color: var(--text-color);
+}
+
+.knowledge-icon {
+  height: 5vh;
+  width: 5vh;
+  padding: 1vh;
+  margin-right: 1vh;
+  color: var(--accent-color);
+}
+
+.knowledge-description {
+ 
+  padding: 0 1vw 0 8vh;
+  color: var(--secondary-text-color);
+}
+
 
 /* ~PORTFOLIO */
 

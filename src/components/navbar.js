@@ -36,8 +36,9 @@ export default class NavBar extends React.Component{
                 <div id='navbar-container'>
                     <div className='item-container no-interaction'>
                         <div className='navbar-item' onClick={this.handle_click}>HOME</div>
-                        <div className='navbar-item' onClick={this.handle_click}>ABOUT</div>
                         <div className='navbar-item'>RESUME</div>
+                        <div className='navbar-item' onClick={this.handle_click}>ABOUT</div>
+                        <div className='navbar-item' onClick={this.handle_click}>SKILLS</div>
                         <div className='navbar-item' onClick={this.handle_click}>PORTFOLIO</div>
                         <div className='navbar-item' onClick={this.handle_click}>CONTACT</div>
                     </div>
