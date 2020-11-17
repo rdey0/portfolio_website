@@ -92,17 +92,18 @@ export default class Portfolio extends React.Component {
                         }
                     </div>
                 </Reveal>
-
-                <FlipMove id='projects-container' duration={250} maintainContainerHeight={true}>
-                    {
-                        this.state.portfolio
-                            .filter((project)=>(project.filter_tags.includes(this.state.filters[this.state.selected_filter])))
-                            .map( (project,index)=>{
-                                return <ProjectCard key={project.name} name={project.name} description={project.description} 
-                                    link={project.link} src={project.img_src}/>
-                        })
-                    }
-                </FlipMove>
+                <Reveal effect='fade-slide-up' duration={1000}>
+                    <FlipMove id='projects-container' duration={250} maintainContainerHeight={true}>
+                        {
+                            this.state.portfolio
+                                .filter((project)=>(project.filter_tags.includes(this.state.filters[this.state.selected_filter])))
+                                .map( (project,index)=>{
+                                    return <ProjectCard key={project.name} name={project.name} description={project.description} 
+                                        link={project.link} src={project.img_src}/>
+                            })
+                        }
+                    </FlipMove>
+                </Reveal>
                    
                
             </div>

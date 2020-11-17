@@ -8,6 +8,7 @@ export default class Contact extends React.Component{
         this.state = {
             name: '',
             email: '',
+            subject: '',
             phone_number: '',
             message: ''
         };
@@ -25,6 +26,9 @@ export default class Contact extends React.Component{
             case 'email':
                 this.setState({email: updated_text});
                 break;
+            case 'subject':
+                this.setState({subject: updated_text});
+                break;
             case 'phone':
                 this.setState({phone_number: updated_text});
                 break;
@@ -40,17 +44,32 @@ export default class Contact extends React.Component{
     handle_form_submit=()=> {
         var name = this.state.name;
         var email = this.state.email;
+        var subject = this.state.subject;
         var message = this.state.message;
 
-        if(name && email && message){
+        if(name && email && message && subject){
             console.log('form submitted');
-            // send email to me
-            // clear input fields
-            this.setState({
-                name: '',
-                email: '',
-                message: ''
-            });
+
+            
+            window.Email.send({
+                SecureToken: '010b08c2-294b-41b8-bf57-2d8e35a0f95d',
+                To: 'roydey10@gmail.com',
+                From: 'roydey10@gmail.com',
+                Subject: subject,
+                Body: `${name} from ${email} says \n ${message}`
+            }).then(response=>{
+                console.log(response);
+                // send email to me
+                // clear input fields
+                this.setState({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+            })
+
+            
         }else{
             // display appropriate error messages
             console.log('error form not submitted');
@@ -58,6 +77,8 @@ export default class Contact extends React.Component{
         }
 
     }
+
+    //4822f734-bd4b-4bb2-bbd1-3452d1e56c38
 
     render(){
         return(
@@ -68,8 +89,11 @@ export default class Contact extends React.Component{
                 <div id='contact-body'>
                         <Reveal effect='fade-slide-right' duration={1000}>
                             <div id='user-info-container'>
-                                    <input id='name' placeholder='Name*' value={this.state.name} onChange={this.handle_field_change} className='input-field-small input'></input>
-                                    <input id='email' placeholder='Email*' value={this.state.email}  onChange={this.handle_field_change}  className='input-field-small input'></input>
+                                    <div className='inline-container'>
+                                        <input id='name' placeholder='Name*' value={this.state.name} onChange={this.handle_field_change} className='input-field-small input-small'></input>
+                                        <input id='email' placeholder='Email*' value={this.state.email}  onChange={this.handle_field_change}  className='input-field-small input-small'></input>
+                                    </div>
+                                    <input id='subject' placeholder='Subject*' value={this.state.subject}  onChange={this.handle_field_change}  className='input-field-small input'></input>
                                     <textarea id='message' placeholder='Message*' value={this.state.message}  onChange={this.handle_field_change}  className='input-field-large input'></textarea>
                                     <div className='button-container'>
                                         <div className='button' onClick={this.handle_form_submit}>SEND MESSAGE</div>
