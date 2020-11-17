@@ -1,6 +1,7 @@
 import React from 'react';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import {MdLocationOn, MdEmail, MdSmartphone} from 'react-icons/md'
+import Reveal from 'react-reveal/Reveal';
 export default class Contact extends React.Component{
     constructor(){
         super();
@@ -61,61 +62,72 @@ export default class Contact extends React.Component{
     render(){
         return(
             <div id='contact-container' className='section'>
-                <h1 className='section-title'>CONTACT</h1>
+                <Reveal effect='fade-slide-up' duration={1000}>
+                    <h1 className='section-title'>CONTACT</h1>
+                </Reveal>
                 <div id='contact-body'>
-                    <div id='user-info-container'>
-                        <input id='name' placeholder='Name*' value={this.state.name} onChange={this.handle_field_change} className='input-field-small input'></input>
-                        <input id='email' placeholder='Email*' value={this.state.email}  onChange={this.handle_field_change}  className='input-field-small input'></input>
-                        <textarea id='message' placeholder='Message*' value={this.state.message}  onChange={this.handle_field_change}  className='input-field-large input'></textarea>
-                        <div className='button-container'>
-                            <div className='button' onClick={this.handle_form_submit}>SEND MESSAGE</div>
-                        </div>
-                    </div>
+                        <Reveal effect='fade-slide-right' duration={1000}>
+                            <div id='user-info-container'>
+                                    <input id='name' placeholder='Name*' value={this.state.name} onChange={this.handle_field_change} className='input-field-small input'></input>
+                                    <input id='email' placeholder='Email*' value={this.state.email}  onChange={this.handle_field_change}  className='input-field-small input'></input>
+                                    <textarea id='message' placeholder='Message*' value={this.state.message}  onChange={this.handle_field_change}  className='input-field-large input'></textarea>
+                                    <div className='button-container'>
+                                        <div className='button' onClick={this.handle_form_submit}>SEND MESSAGE</div>
+                                    </div>  
+                            </div>
+                        </Reveal>
                     
+                        <div id='personal-info-container'>
+                            <div className='personal-info-item'>
+                                <Reveal effect='fade-slide-left' duration={1000}>
+                                    <div className='info-title-container'>
+                                        <MdLocationOn className='info-icon'/>
+                                        <div className='info-title no-interaction'>LOCATION</div> 
+                                    </div>
+                                    <div className='info-content'>San Jose, CA 95129</div>
+                                </Reveal>
+                            </div>
+                            <div className='personal-info-item'>
+                                <Reveal effect='fade-slide-left' duration={1000}>
+                                    <div className='info-title-container'>
+                                        <MdEmail className='info-icon'/>
+                                        <div className='info-title no-interaction'>EMAIL</div>
+                                    </div>
+                                    <div className='info-content'>roydey10@gmail.com</div>
+                                </Reveal>
+                            </div>
+                            <div className='personal-info-item no-border-bottom'>
+                                <Reveal effect='fade-slide-left' duration={1000}>
+                                    <div className='info-title-container'>
+                                        <MdSmartphone className='info-icon'/>
+                                        <div className='info-title no-interaction'>PHONE NUMBER</div>
+                                    </div>
+                                    <div className='info-content'>+1 (408) 413-7941</div>
+                                </Reveal>
+                            </div>
+                        </div>
 
-                    <div id='personal-info-container'>
-                        <div className='personal-info-item'>
-                            <div className='info-title-container'>
-                                <MdLocationOn className='info-icon'/>
-                                <div className='info-title no-interaction'>LOCATION</div> 
-                            </div>
-                            <div className='info-content'>San Jose, CA 95129</div>
-                        </div>
-                        <div className='personal-info-item'>
-                            <div className='info-title-container'>
-                                <MdEmail className='info-icon'/>
-                                <div className='info-title no-interaction'>EMAIL</div>
-                            </div>
-                            <div className='info-content'>roydey10@gmail.com</div>
-                        </div>
-                        <div className='personal-info-item no-border-bottom'>
-                            <div className='info-title-container'>
-                                <MdSmartphone className='info-icon'/>
-                                <div className='info-title no-interaction'>PHONE NUMBER</div>
-                            </div>
-                            <div className='info-content'>+1 (408) 413-7941</div>
-                        </div>
-                    </div>
                 </div>
-                
-                <div className='social-links'>
-                    
-                    <div className='link-container'>
-                        <a 
-                        href={'https://github.com/rdey0'}
-                        target='_blank' 
-                        rel='noopener noreferrer' >
-                            <AiFillGithub className='social-icon'/>
-                        </a>
+                <Reveal effect='fade-slide-left' duration={1000}>
+                    <div className='social-links'>
                         
-                        <a 
-                        href={'https://www.linkedin.com/in/roydey/'}
-                        target='_blank' 
-                        rel='noopener noreferrer' >
-                            <AiFillLinkedin className='social-icon'/>
-                        </a>
+                        <div className='link-container'>
+                            <a 
+                            href={'https://github.com/rdey0'}
+                            target='_blank' 
+                            rel='noopener noreferrer' >
+                                <AiFillGithub className='social-icon'/>
+                            </a>
+                            
+                            <a 
+                            href={'https://www.linkedin.com/in/roydey/'}
+                            target='_blank' 
+                            rel='noopener noreferrer' >
+                                <AiFillLinkedin className='social-icon'/>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </Reveal>
                 
             </div>
         )

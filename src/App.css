@@ -654,7 +654,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-right: solid 1px var(--secondary-text-color-opaque);
+  
 }
 
 #personal-info-container {
@@ -665,6 +665,7 @@
   margin-bottom: 5vh;
   width: 40vw;
   height: 70vh;
+  border-left: solid 1px var(--secondary-text-color-opaque);
 }
 
 .personal-info-item {
