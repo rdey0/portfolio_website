@@ -7,6 +7,7 @@ import cancer_img from '../images/cancer_classifier_pf.PNG'
 import reverse_img from '../images/reverse_img_search_pf.png'
 import panorama_img from '../images/panorama_pf.png'
 import resizer_img from '../images/image_resizer_pf.png'
+import Reveal from 'react-reveal/Reveal';
 const portfolio_items = [
     {
         name: 'RAPHUNT',
@@ -72,21 +73,25 @@ export default class Portfolio extends React.Component {
     render(){
         return(
             <div id='portfolio-container' className='section'>
-                <h1 className='section-title'>PORTFOLIO</h1>
-                <div id='portfolio-filters' className='no-interaction'>
-                    {
-                        this.state.filters.map((filter,index)=>{
-                            if(index == this.state.selected_filter){
-                                return <div key={index} order={index} className='filter selected' 
-                                    onClick={this.handle_filter_change}>{filter}</div>
-                            }else{
-                                return <div key={index} order={index} className='filter'
-                                    onClick={this.handle_filter_change}>{filter}</div>
-                            }
-                                
-                        })
-                    }
-                </div>
+                <Reveal effect='fade-slide-up' duration={1000}>
+                    <h1 className='section-title'>PORTFOLIO</h1>
+                </Reveal>
+                <Reveal effect='fade-slide-up' duration={1000}>
+                    <div id='portfolio-filters' className='no-interaction'>
+                        {
+                            this.state.filters.map((filter,index)=>{
+                                if(index == this.state.selected_filter){
+                                    return <div key={index} order={index} className='filter selected' 
+                                        onClick={this.handle_filter_change}>{filter}</div>
+                                }else{
+                                    return <div key={index} order={index} className='filter'
+                                        onClick={this.handle_filter_change}>{filter}</div>
+                                }
+                                    
+                            })
+                        }
+                    </div>
+                </Reveal>
 
                 <FlipMove id='projects-container' duration={250} maintainContainerHeight={true}>
                     {

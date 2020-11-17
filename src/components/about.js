@@ -9,10 +9,10 @@ export default function About() {
     
     return(
         <div id='about-container' className='section'>
-            <Reveal effect='fade-slide-up' duration={500}>
+            <Reveal effect='fade-slide-up' duration={1000}>
                 <h1 className='section-title'>ABOUT ME</h1>
             </Reveal>
-            <Reveal effect='fade-slide-up' duration={500}>
+            <Reveal effect='fade-slide-up' duration={1000}>
                 <div id='about-header-container'>
                     <p className='short-description'>
                         I'm a passionate developer who enjoys all aspects of the process, front end and back.
@@ -20,7 +20,7 @@ export default function About() {
                     <div className='bottom-border-container'></div>
                 </div>
             </Reveal>
-            <Reveal effect='fade-slide-up' duration={500}>
+            <Reveal effect='fade-slide-up' duration={1000}>
                 <div id='about-body-container'>
                     <Reveal effect='fade-slide-right' duration={1000}>
                         <img id='profile-pic' src={me}/>

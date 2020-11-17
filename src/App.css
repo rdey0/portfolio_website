@@ -50,6 +50,11 @@
   animation: fade-in-slide-left ease 0.5s;
 }
 
+.fade-in {
+  animation: fadeIn ease 0.5s;
+}
+
+
 .App, body, #root {
   position: relative;
   z-index: -1;
