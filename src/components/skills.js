@@ -4,6 +4,7 @@ import{SiJavascript} from 'react-icons/si'
 import {GiGears} from 'react-icons/gi'
 import {MdLaptop} from 'react-icons/md'
 import {BsTerminalFill} from 'react-icons/bs'
+import Reveal from 'react-reveal/Reveal';
 const skill_items = [
     {
         name: 'REACT',
@@ -63,16 +64,20 @@ export default function Skills(){
     return (
         <div id='skills-container' className='section'>
             <div id='skills-section'>
-                <h1 className='section-title-alt'>SKILLS</h1>
+                <Reveal effect='fade-slide-right' duration={1000}>
+                    <h1 className='section-title-alt'>SKILLS</h1>
+                </Reveal>
                 <div id='skills'>
                     {
                         skill_items.map((skill, index)=>{
                             var Icon = skill_items[index].icon;
                             return(
-                                <div key={index} className='skill-item'>
-                                    <Icon className='skill-icon'/>
-                                    <div className='skill-name'>{skill.name}</div>
-                                </div>
+                                <Reveal effect='fade-slide-up' duration={1000}>
+                                    <div key={index} className='skill-item'>
+                                        <Icon className='skill-icon'/>
+                                        <div className='skill-name'>{skill.name}</div>
+                                    </div>
+                                </Reveal>
                             )
                         })
                     }
@@ -80,19 +85,23 @@ export default function Skills(){
             </div>
 
             <div id='knowledge-section'>
-                <h1 className='section-title-alt'>KNOWLEDGE</h1>
+                <Reveal effect='fade-slide-right' duration={1000}>
+                    <h1 className='section-title-alt'>KNOWLEDGE</h1>
+                </Reveal>
                 <div id='knowledge'>
                     {
                         knowledge_items.map((knowledge, index)=>{
                             var Icon = knowledge.icon;
                             return(
-                                <div key={index} className='knowledge-item'>
-                                    <div className='knowledge-header'>
-                                        <Icon className='knowledge-icon' />
-                                        <div className='knowledge-title'>{knowledge.name}</div>
+                                <Reveal effect='fade-slide-up' duration={1000}>
+                                    <div key={index} className='knowledge-item'>
+                                        <div className='knowledge-header'>
+                                            <Icon className='knowledge-icon' />
+                                            <div className='knowledge-title'>{knowledge.name}</div>
+                                        </div>
+                                        <div className='knowledge-description'>{knowledge.description}</div>
                                     </div>
-                                    <div className='knowledge-description'>{knowledge.description}</div>
-                                </div>
+                                </Reveal>
                             )
                         })
                     }
