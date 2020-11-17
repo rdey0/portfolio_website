@@ -64,16 +64,18 @@ export default function Skills(){
     return (
         <div id='skills-container' className='section'>
             <div id='skills-section'>
-                <Reveal effect='fade-slide-right' duration={1000}>
-                    <h1 className='section-title-alt'>SKILLS</h1>
+                <Reveal effect='fade-slide-right'>
+                    <div className='hidden'>
+                        <h1 className='section-title-alt'>SKILLS</h1>
+                    </div>
                 </Reveal>
                 <div id='skills'>
                     {
                         skill_items.map((skill, index)=>{
                             var Icon = skill_items[index].icon;
                             return(
-                                <Reveal effect='fade-slide-left' duration={1000}>
-                                    <div key={index} className='skill-item'>
+                                <Reveal effect='fade-slide-left'>
+                                    <div key={index} className='skill-item hidden'>
                                         <Icon className='skill-icon'/>
                                         <div className='skill-name'>{skill.name}</div>
                                     </div>
@@ -85,21 +87,25 @@ export default function Skills(){
             </div>
 
             <div id='knowledge-section'>
-                <Reveal effect='fade-slide-right' duration={1000}>
-                    <h1 className='section-title-alt'>KNOWLEDGE</h1>
+                <Reveal effect='fade-slide-right'>
+                    <div className='hidden'>
+                        <h1 className='section-title-alt'>KNOWLEDGE</h1>
+                    </div>  
                 </Reveal>
                 <div id='knowledge'>
                     {
                         knowledge_items.map((knowledge, index)=>{
                             var Icon = knowledge.icon;
                             return(
-                                <Reveal effect='fade-slide-left' duration={1000}>
-                                    <div key={index} className='knowledge-item'>
-                                        <div className='knowledge-header'>
-                                            <Icon className='knowledge-icon' />
-                                            <div className='knowledge-title'>{knowledge.name}</div>
+                                <Reveal effect='fade-slide-left'>
+                                    <div className='hidden'>
+                                        <div key={index} className='knowledge-item'>
+                                            <div className='knowledge-header'>
+                                                <Icon className='knowledge-icon' />
+                                                <div className='knowledge-title'>{knowledge.name}</div>
+                                            </div>
+                                            <div className='knowledge-description'>{knowledge.description}</div>
                                         </div>
-                                        <div className='knowledge-description'>{knowledge.description}</div>
                                     </div>
                                 </Reveal>
                             )

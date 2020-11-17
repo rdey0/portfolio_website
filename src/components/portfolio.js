@@ -73,11 +73,13 @@ export default class Portfolio extends React.Component {
     render(){
         return(
             <div id='portfolio-container' className='section'>
-                <Reveal effect='fade-slide-up' duration={1000}>
-                    <h1 className='section-title'>PORTFOLIO</h1>
+                <Reveal effect='fade-slide-up'>
+                    <div className='hidden'>
+                        <h1 className='section-title'>PORTFOLIO</h1>
+                    </div>
                 </Reveal>
                 <Reveal effect='fade-slide-up' duration={1000}>
-                    <div id='portfolio-filters' className='no-interaction'>
+                    <div id='portfolio-filters' className='no-interaction hidden'>
                         {
                             this.state.filters.map((filter,index)=>{
                                 if(index == this.state.selected_filter){
@@ -92,17 +94,19 @@ export default class Portfolio extends React.Component {
                         }
                     </div>
                 </Reveal>
-                <Reveal effect='fade-slide-up' duration={1000}>
-                    <FlipMove id='projects-container' duration={250} maintainContainerHeight={true}>
-                        {
-                            this.state.portfolio
-                                .filter((project)=>(project.filter_tags.includes(this.state.filters[this.state.selected_filter])))
-                                .map( (project,index)=>{
-                                    return <ProjectCard key={project.name} name={project.name} description={project.description} 
-                                        link={project.link} src={project.img_src}/>
-                            })
-                        }
-                    </FlipMove>
+                <Reveal effect='fade-slide-up' duration={1000} >
+                    <div className='hidden'>
+                        <FlipMove id='projects-container' duration={250} maintainContainerHeight={true}>
+                            {
+                                this.state.portfolio
+                                    .filter((project)=>(project.filter_tags.includes(this.state.filters[this.state.selected_filter])))
+                                    .map( (project,index)=>{
+                                        return <ProjectCard key={project.name} name={project.name} description={project.description} 
+                                            link={project.link} src={project.img_src}/>
+                                })
+                            }
+                        </FlipMove>
+                    </div>
                 </Reveal>
                    
                

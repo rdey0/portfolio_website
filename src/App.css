@@ -36,18 +36,41 @@
   --navbar-animation-time: 1s;
 }
 
+/* ~ANIMATION VARIABLES */
+
+:root {
+  --reveal-delay: 0.2s;
+  --reveal-duration: 1s;
+}
+
 /* ~GENERAL PAGE STYLES */
 
-.fade-slide-up {
-  animation: fade-in-slide-up ease 0.5s;
+.hidden > * {
+  opacity: 0;
 }
 
-.fade-slide-right {
-  animation: fade-in-slide-right ease 0.5s;
+.fade-slide-up > * {
+  animation: fade-in-slide-up ease var(--reveal-duration) var(--reveal-delay);
+  /* maintain animation styles after completion*/
+  animation-fill-mode: forwards;
+  -webkit-fill-mode: forwards;
+  -moz-fill-mode: forwards;
 }
 
-.fade-slide-left {
-  animation: fade-in-slide-left ease 0.5s;
+.fade-slide-right > * {
+  animation: fade-in-slide-right ease var(--reveal-duration) var(--reveal-delay);
+  /* maintain animation styles after completion*/
+  animation-fill-mode: forwards;
+  -webkit-fill-mode: forwards;
+  -moz-fill-mode: forwards;
+}
+
+.fade-slide-left > * {
+  animation: fade-in-slide-left var(--reveal-duration) var(--reveal-delay);
+  /* maintain animation styles after completion*/
+  animation-fill-mode: forwards;
+  -webkit-fill-mode: forwards;
+  -moz-fill-mode: forwards;
 }
 
 .fade-in {
@@ -100,7 +123,7 @@
 @keyframes fade-in-slide-up{
   0% {
     opacity:0;
-    transform: translateY(15vh);
+    transform: translateY(10vh);
   }
   100% {
     opacity:1;
@@ -286,6 +309,7 @@
   width: 50%;
   margin: 0 auto;
   margin-bottom: 3vh;
+  
 }
 
 .bottom-border-container {
@@ -324,7 +348,6 @@
 
 #body-long-description {
   color: var(--secondary-text-color);
-  margin-bottom: 3vh;
 }
 
 #about-my-info {
@@ -335,7 +358,7 @@
 
 .about-info-item {
   width: 20vw;
-  margin-bottom: 3vh;
+  margin-top: 3vh;
 }
 
 .about-info-title {
@@ -667,13 +690,6 @@
   grid-column-gap: 1vh;
 }
 
-/*
-display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1vw;
-  grid-row-gap: 1vw;
-*/
-
 #personal-info-container {
   text-align: left;
   margin: 0 auto;
@@ -705,19 +721,22 @@ display: grid;
 
 .info-icon {
   color: var(--accent-color);
-  height: 5vh;
-  width: 5vh;
-  padding-right: 1vh;
+  height: 4vh;
+  width: 4vh;
+  padding: 1vh;
+  background-color: var(--body-light);
+  border-radius: 100%;
 }
 
 .info-title {
   color: var(--text-color);
   font-weight: 500;
+  padding-left: 1vh;
 }
 
 .info-content {
   color: var(--secondary-text-color);
-  padding-left: 6vh;
+  padding-left: 7vh;
 }
 
 .input-small {

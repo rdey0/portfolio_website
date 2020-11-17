@@ -10,9 +10,12 @@ export default class Contact extends React.Component{
             email: '',
             subject: '',
             phone_number: '',
-            message: ''
+            message: '',
+            error: false,
+            allow_submit: false
         };
     }
+
 
     // Update the associated state when a change is made
     handle_field_change=(event)=> {
@@ -46,11 +49,17 @@ export default class Contact extends React.Component{
         var email = this.state.email;
         var subject = this.state.subject;
         var message = this.state.message;
+        var errored_fields = [];
+        const email_regex= RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$');
+        if(!name)
+            errored_fields.push('name');
+        if(!email || !email_regex.test(email))
+            errored_fields.push('email');
 
         if(name && email && message && subject){
             console.log('form submitted');
 
-            
+            /*
             window.Email.send({
                 SecureToken: '010b08c2-294b-41b8-bf57-2d8e35a0f95d',
                 To: 'roydey10@gmail.com',
@@ -68,6 +77,7 @@ export default class Contact extends React.Component{
                     message: ''
                 });
             })
+            */
 
             
         }else{
@@ -84,11 +94,13 @@ export default class Contact extends React.Component{
         return(
             <div id='contact-container' className='section'>
                 <Reveal effect='fade-slide-up' duration={1000}>
-                    <h1 className='section-title'>CONTACT</h1>
+                    <div className='hidden'>
+                        <h1 className='section-title'>CONTACT</h1>
+                    </div> 
                 </Reveal>
                 <div id='contact-body'>
-                        <Reveal effect='fade-slide-right' duration={1000}>
-                            <div id='user-info-container'>
+                        <Reveal effect='fade-slide-right'>
+                            <div id='user-info-container' className='hidden'>
                                     <div className='inline-container'>
                                         <input id='name' placeholder='Name*' value={this.state.name} onChange={this.handle_field_change} className='input-field-small input-small'></input>
                                         <input id='email' placeholder='Email*' value={this.state.email}  onChange={this.handle_field_change}  className='input-field-small input-small'></input>
@@ -103,37 +115,43 @@ export default class Contact extends React.Component{
                     
                         <div id='personal-info-container'>
                             <div className='personal-info-item'>
-                                <Reveal effect='fade-slide-left' duration={1000}>
-                                    <div className='info-title-container'>
+                                <Reveal effect='fade-slide-left'>
+                                    <div className='info-title-container hidden'>
                                         <MdLocationOn className='info-icon'/>
                                         <div className='info-title no-interaction'>LOCATION</div> 
                                     </div>
-                                    <div className='info-content'>San Jose, CA 95129</div>
+                                    <div className='hidden'>
+                                        <div className='info-content'>San Jose, CA 95129</div>
+                                    </div>
                                 </Reveal>
                             </div>
                             <div className='personal-info-item'>
-                                <Reveal effect='fade-slide-left' duration={1000}>
-                                    <div className='info-title-container'>
+                                <Reveal effect='fade-slide-left'>
+                                    <div className='info-title-container hidden'>
                                         <MdEmail className='info-icon'/>
                                         <div className='info-title no-interaction'>EMAIL</div>
                                     </div>
-                                    <div className='info-content'>roydey10@gmail.com</div>
+                                    <div className='hidden'>
+                                        <div className='info-content'>roydey10@gmail.com</div>
+                                    </div>  
                                 </Reveal>
                             </div>
                             <div className='personal-info-item no-border-bottom'>
-                                <Reveal effect='fade-slide-left' duration={1000}>
-                                    <div className='info-title-container'>
+                                <Reveal effect='fade-slide-left'>
+                                    <div className='info-title-container hidden'>
                                         <MdSmartphone className='info-icon'/>
                                         <div className='info-title no-interaction'>PHONE NUMBER</div>
                                     </div>
-                                    <div className='info-content'>+1 (408) 413-7941</div>
+                                    <div className='hidden'>
+                                        <div className='info-content'>+1 (408) 413-7941</div>
+                                    </div>
                                 </Reveal>
                             </div>
                         </div>
 
                 </div>
-                <Reveal effect='fade-slide-left' duration={1000}>
-                    <div className='social-links'>
+                <Reveal effect='fade-slide-left'>
+                    <div className='social-links hidden'>
                         
                         <div className='link-container'>
                             <a 
