@@ -4,7 +4,6 @@ import me from '../images/me.png'
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import Reveal from 'react-reveal/Reveal';
 
-
 export default function About() {
     
     return(

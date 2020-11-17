@@ -72,7 +72,7 @@ export default function Skills(){
                         skill_items.map((skill, index)=>{
                             var Icon = skill_items[index].icon;
                             return(
-                                <Reveal effect='fade-slide-up' duration={1000}>
+                                <Reveal effect='fade-slide-left' duration={1000}>
                                     <div key={index} className='skill-item'>
                                         <Icon className='skill-icon'/>
                                         <div className='skill-name'>{skill.name}</div>
@@ -93,7 +93,7 @@ export default function Skills(){
                         knowledge_items.map((knowledge, index)=>{
                             var Icon = knowledge.icon;
                             return(
-                                <Reveal effect='fade-slide-up' duration={1000}>
+                                <Reveal effect='fade-slide-left' duration={1000}>
                                     <div key={index} className='knowledge-item'>
                                         <div className='knowledge-header'>
                                             <Icon className='knowledge-icon' />
