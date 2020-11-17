@@ -38,8 +38,16 @@
 
 /* ~GENERAL PAGE STYLES */
 
-.fade-in-slide-up {
-  animation: fadeIn ease 0.4s, slide-up 0.4s ease;
+.fade-slide-up {
+  animation: fade-in-slide-up ease 0.5s;
+}
+
+.fade-slide-right {
+  animation: fade-in-slide-right ease 0.5s;
+}
+
+.fade-slide-left {
+  animation: fade-in-slide-left ease 0.5s;
 }
 
 .App, body, #root {
@@ -82,7 +90,40 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
+/* GENERAL KEYFRAMES */
 
+@keyframes fade-in-slide-up{
+  0% {
+    opacity:0;
+    transform: translateY(20vh);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-slide-right{
+  0% {
+    opacity:0;
+    transform: translateX(-5vw);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-slide-left{
+  0% {
+    opacity:0;
+    transform: translateX(5vw);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
 
 /* ~NAVBAR */
 
