@@ -9,55 +9,97 @@ export default class Contact extends React.Component{
             name: '',
             email: '',
             subject: '',
-            phone_number: '',
             message: '',
-            error: false,
-            allow_submit: false
+            errored_elements: {
+                name: false,
+                email: false,
+                subject: false,
+                message: false
+            },
+            can_submit: false   
         };
     }
 
+    is_valid_email=(email)=> {
+        const email_regex = RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$');
+        return email_regex.test(email);
+    }
 
-    // Update the associated state when a change is made
+    is_errored = (field_id)=>{
+        var errored = this.state.errored_elements;
+        return errored[field_id];
+    }
+
+    handle_on_blur=(event)=> {
+        var field_id = event.target.id;
+        var updated_text = event.target.value;
+        var new_errored_state = this.state.errored_elements;
+        // check if field is already marked as errored (if so then we don't have to do anything)
+        if(!this.is_errored(field_id)){
+            // check if the text field is empty, or if it's an invalid email
+            if(!updated_text || (field_id == 'email' && !this.is_valid_email(updated_text))){
+                // mark this field as errored
+                new_errored_state[field_id] = true;
+                this.setState({errored_elements: new_errored_state},console.log(this.state));
+            }
+        }
+        
+    }
+    // Update the associated state when a change to a field is made and check if
+    // it is no longer errored
     handle_field_change=(event)=> {
         var field_id = event.target.id;
         var updated_text = event.target.value;
-        // update the appropriate state
-        switch(field_id){
-            case 'name':
-                this.setState({name: updated_text});
-                break;
-            case 'email':
-                this.setState({email: updated_text});
-                break;
-            case 'subject':
-                this.setState({subject: updated_text});
-                break;
-            case 'phone':
-                this.setState({phone_number: updated_text});
-                break;
-            case 'message':
-                this.setState({message: updated_text});
-                break;
-            default:
-                break;
+        var new_errored_state = this.state.errored_elements;
+        var new_state = {
+            errored_elements: new_errored_state
+        };
+        new_state[field_id] = updated_text;
+        
+        // check if field is not marked as errored (if so then we don't have to do anything)
+        if(this.is_errored(field_id)){
+            console.log(field_id);
+            // check if the errored field is no longer errored
+            if(field_id == 'email'){
+                console.log(this.is_valid_email(updated_text));
+                // mark field as not errored if email is now valid
+                if(this.is_valid_email(updated_text))
+                    new_state.errored_elements[field_id] = false;
+            }else if(updated_text){
+                // mark field as not errored
+                new_state.errored_elements[field_id] = false;
+            }
         }
+
+        this.setState(new_state,()=>{
+            this.setState({can_submit: this.can_submit()});
+        });
+        
+    }
+
+    // check if the form can be submitted (there exists no errors)
+    can_submit=()=> {
+        console.log('can submit?')
+        // make sure email is valid
+        if(!this.is_valid_email(this.state.email))
+            return false
+        console.log('email ok');
+        // make sure all other fields are filled in and have no outstanding errors
+        const errored = this.state.errored_elements;
+        for(const field_id in errored){
+            var field_text = this.state[field_id];
+            if(errored[field_id] || !field_text)
+                return false;            
+        }
+        console.log('can submit');
+        return true;
     }
 
     // Check if required fields have been filled then send me an email
     handle_form_submit=()=> {
-        var name = this.state.name;
-        var email = this.state.email;
-        var subject = this.state.subject;
-        var message = this.state.message;
-        var errored_fields = [];
-        const email_regex= RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$');
-        if(!name)
-            errored_fields.push('name');
-        if(!email || !email_regex.test(email))
-            errored_fields.push('email');
-
-        if(name && email && message && subject){
-            console.log('form submitted');
+        console.log(this.can_submit());
+        
+        
 
             /*
             window.Email.send({
@@ -79,12 +121,6 @@ export default class Contact extends React.Component{
             })
             */
 
-            
-        }else{
-            // display appropriate error messages
-            console.log('error form not submitted');
-            console.log(this.state);
-        }
 
     }
 
@@ -102,13 +138,33 @@ export default class Contact extends React.Component{
                         <Reveal effect='fade-slide-right'>
                             <div id='user-info-container' className='hidden'>
                                     <div className='inline-container'>
-                                        <input id='name' placeholder='Name*' value={this.state.name} onChange={this.handle_field_change} className='input-field-small input-small'></input>
-                                        <input id='email' placeholder='Email*' value={this.state.email}  onChange={this.handle_field_change}  className='input-field-small input-small'></input>
+                                        <input id='name' 
+                                            placeholder='Name*' 
+                                            value={this.state.name} 
+                                            onChange={this.handle_field_change}  
+                                            onBlur={this.handle_on_blur} 
+                                            className={`input-field-small input-small ${this.is_errored('name')?'errored':''}`}></input>
+                                        <input id='email' 
+                                            placeholder='Email*' 
+                                            value={this.state.email}  
+                                            onChange={this.handle_field_change}  
+                                            onBlur={this.handle_on_blur} 
+                                            className={`input-field-small input-small ${this.is_errored('email')?'errored':''}`}></input>
                                     </div>
-                                    <input id='subject' placeholder='Subject*' value={this.state.subject}  onChange={this.handle_field_change}  className='input-field-small input'></input>
-                                    <textarea id='message' placeholder='Message*' value={this.state.message}  onChange={this.handle_field_change}  className='input-field-large input'></textarea>
+                                    <input id='subject' 
+                                        placeholder='Subject*' 
+                                        value={this.state.subject}  
+                                        onChange={this.handle_field_change}  
+                                        onBlur={this.handle_on_blur} 
+                                        className={`input-field-small input ${this.is_errored('subject')?'errored':''}`}></input>
+                                    <textarea id='message' 
+                                        placeholder='Message*' 
+                                        value={this.state.message}  
+                                        onChange={this.handle_field_change}  
+                                        onBlur={this.handle_on_blur} 
+                                        className={`input-field-large input ${this.is_errored('message')?'errored':''}`}></textarea>
                                     <div className='button-container'>
-                                        <div className='button' onClick={this.handle_form_submit}>SEND MESSAGE</div>
+                                        <div className={this.state.can_submit ? 'button' : 'disabled-button no-interaction'} onClick={this.handle_form_submit}>SEND MESSAGE</div>
                                     </div>  
                             </div>
                         </Reveal>
@@ -150,7 +206,7 @@ export default class Contact extends React.Component{
                         </div>
 
                 </div>
-                <Reveal effect='fade-slide-left'>
+                <Reveal effect='fade-slide-up'>
                     <div className='social-links hidden'>
                         
                         <div className='link-container'>

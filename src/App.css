@@ -1,9 +1,10 @@
+/* ~GENERAL VARIABLES */
+:root {
+  --page-font: 'Montserrat', sans-serif;
+}
+
 /* ~COLOR VARIABLES */
 :root {
-  /*--accent-color: #0cba58;
-    --accent-color-muted: #0cba57b4;
-    --accent-color-highlight: #16cf66;
-  */
   --accent-color: #ff4b57;
   --accent-color-highlight: #ff5964;
   --accent-color-opaque: #ff4b577a;
@@ -20,25 +21,14 @@
   --project-card-width: 25.3vw;
   --project-car-height: 30vh;
   --project-card-margin: 0 0.5vw 1vw 0.5vw;
-  
-  /*
-  --project-card-width: 26.6vw;
-  --project-car-height: 30vh;
-  --project-card-margin: 0;
-  */
 }
 
-/* ~KEYFRAME VARIABLES */
+/* ~ANIMATION VARIABLES */
 :root {
   --title-slide-time: 1.2s;
   --descriptors-fade-in-time: 1s;
   --navbar-animation-delay: 1.2s;
   --navbar-animation-time: 1s;
-}
-
-/* ~ANIMATION VARIABLES */
-
-:root {
   --reveal-delay: 0.2s;
   --reveal-duration: 1s;
 }
@@ -81,7 +71,7 @@
 .App, body, #root {
   position: relative;
   z-index: -1;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--page-font);
 }
 
 .section {
@@ -781,6 +771,12 @@
 
 .input-field-large {
   height: 25vh;
+  resize: vertical;
+}
+
+.errored {
+  border: solid 2px rgba(255, 0, 0, 0.377);
+  background-color: #291b1d;
 }
 
 .button-container {
@@ -796,12 +792,31 @@
   line-height: 5vh;
   color: white;
   background-color:  var(--accent-color);
+  border: solid 2px var(--accent-color);
   margin: 0 0 0 auto;
   border-radius: 3px;
+  transition: 1s;
+}
+
+.disabled-button {
+  cursor: none;
+  pointer-events: none;
+  font-size: 0.8vw;
+  font-weight: 500;
+  width: 8vw;
+  height: 5vh;
+  line-height: 5vh;
+  color: var(--secondary-text-color);
+  background-color:  transparent;
+  margin: 0 0 0 auto;
+  border: solid 2px var(--accent-color);
+  border-radius: 3px;
+  transition: 1s;
 }
 
 .button:hover {
   background-color: var(--accent-color-highlight);
+  transition: 0s;
 }
 
 .social-links {
