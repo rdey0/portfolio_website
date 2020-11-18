@@ -470,6 +470,7 @@
   flex-direction: column;
   justify-content: center;
   width: 25vw;
+  height: 20vh;
   background-color: var(--body-light);
   padding: 2vh 2vh 4vh 2vh;
   box-sizing: border-box;
@@ -770,6 +771,7 @@
 }
 
 .input-field-large {
+  font-family: Arial, Helvetica, sans-serif;
   height: 25vh;
   resize: vertical;
 }
