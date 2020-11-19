@@ -52,8 +52,8 @@ const knowledge_items = [
     {
         name: 'ALGORITHMS',
         icon: BsTerminalFill,
-        description:`I'm no stranger to work which requires use of data structures 
-        and efficient algorithms. Check out my AI and computer vision projects!`
+        description:`I'm no stranger to data structures and efficient algorithms. 
+        Check out my AI and computer vision projects!`
     }
 ];
 

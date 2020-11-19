@@ -34,6 +34,10 @@
 }
 
 /* ~GENERAL PAGE STYLES */
+#root {
+  font-size: 1vw;
+}
+
 
 .hidden > * {
   opacity: 0;
@@ -332,7 +336,7 @@
 }
 
 #about-body-title {
-  font-size: 2rem;
+  font-size: 2em;
   color: var(--text-color);
 }
 
@@ -410,13 +414,14 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
 .skill-name {
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 500;
 }
 
@@ -462,7 +467,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .knowledge-item {
@@ -476,6 +481,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transition: 0.2s;
 }
 
 .knowledge-item:hover {
@@ -637,7 +643,7 @@
   opacity: 0%;
   width: 15vw;
   color: var(--text-color);
-  font-size: 1.1rem;
+  font-size: 1.1em;
   
 }
 
@@ -677,7 +683,7 @@
 .inline-container {
   width: 40vw;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 1vh;
 }
 
@@ -745,6 +751,7 @@
   box-sizing: border-box;
   margin-bottom: 1vh;
   border-radius: 5px;
+  min-width: 0;
 }
 
 .input {
@@ -787,7 +794,7 @@
 
 .button {
   cursor: pointer;
-  font-size: 0.8vw;
+  font-size: 0.9em;
   font-weight: 500;
   width: 8vw;
   height: 5vh;
@@ -797,13 +804,13 @@
   border: solid 2px var(--accent-color);
   margin: 0 0 0 auto;
   border-radius: 3px;
-  transition: 1s;
+  transition: 0.8s;
 }
 
 .disabled-button {
   cursor: none;
   pointer-events: none;
-  font-size: 0.8vw;
+  font-size: 0.9em;
   font-weight: 500;
   width: 8vw;
   height: 5vh;
@@ -811,9 +818,9 @@
   color: var(--secondary-text-color);
   background-color:  transparent;
   margin: 0 0 0 auto;
-  border: solid 2px var(--accent-color);
+  border: solid 2px var(--accent-color-opaque);
   border-radius: 3px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .button:hover {

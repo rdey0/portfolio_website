@@ -97,11 +97,7 @@ export default class Contact extends React.Component{
 
     // Check if required fields have been filled then send me an email
     handle_form_submit=()=> {
-        console.log(this.can_submit());
-        
-        
-
-            /*
+        if(this.can_submit){
             window.Email.send({
                 SecureToken: '010b08c2-294b-41b8-bf57-2d8e35a0f95d',
                 To: 'roydey10@gmail.com',
@@ -110,8 +106,7 @@ export default class Contact extends React.Component{
                 Body: `${name} from ${email} says \n ${message}`
             }).then(response=>{
                 console.log(response);
-                // send email to me
-                // clear input fields
+                // clear input fields upon successful submit
                 this.setState({
                     name: '',
                     email: '',
@@ -119,8 +114,8 @@ export default class Contact extends React.Component{
                     message: ''
                 });
             })
-            */
-
+        }
+        
 
     }
 
