@@ -102,8 +102,8 @@ export default class Contact extends React.Component{
                 SecureToken: '010b08c2-294b-41b8-bf57-2d8e35a0f95d',
                 To: 'roydey10@gmail.com',
                 From: 'roydey10@gmail.com',
-                Subject: subject,
-                Body: `${name} from ${email} says \n ${message}`
+                Subject: this.state.subject,
+                Body: `${this.state.name} from ${this.state.email} says \n ${this.state.message}`
             }).then(response=>{
                 console.log(response);
                 // clear input fields upon successful submit
@@ -159,7 +159,7 @@ export default class Contact extends React.Component{
                                         onBlur={this.handle_on_blur} 
                                         className={`input-field-large input ${this.is_errored('message')?'errored':''}`}></textarea>
                                     <div className='button-container'>
-                                        <div className={this.state.can_submit ? 'button' : 'disabled-button no-interaction'} onClick={this.handle_form_submit}>SEND MESSAGE</div>
+                                        <div className={this.state.can_submit ? 'button' : 'disabled-button no-interaction'} onClick={this.handle_form_submit}>SEND</div>
                                     </div>  
                             </div>
                         </Reveal>

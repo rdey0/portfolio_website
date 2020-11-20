@@ -35,9 +35,7 @@
 
 /* ~GENERAL PAGE STYLES */
 #root {
-  font-size: 1vw;
 }
-
 
 .hidden > * {
   opacity: 0;
@@ -435,6 +433,8 @@
   background-color: var(--body-dark);
   height: 5vw;
   width: 5vw;
+  min-height: 100px;
+  min-width: 100px;
   padding: 1vw;
   border-radius: 100%;
   margin-bottom: 1vh;
@@ -475,7 +475,7 @@
   flex-direction: column;
   justify-content: center;
   width: 25vw;
-  height: 20vh;
+  height: 23vh;
   background-color: var(--body-light);
   padding: 2vh 2vh 4vh 2vh;
   box-sizing: border-box;
@@ -859,4 +859,98 @@
 
 .no-border-bottom {
   border-bottom: none;
+}
+
+/* ~MEDIA QUERIES */
+
+/* Small Laptops and Large Tablets*/
+@media only screen and (max-width: 1350px) {
+  .item-container {
+    width: 50vw;
+  }
+  .section {
+    font-size: 0.9em;
+  }
+
+}
+
+/* Tablet */
+@media only screen and (max-width: 1200px) {
+  .section {
+    font-size: 0.85em;
+  }
+  .item-container {
+    width: 55vw;
+  }
+  .skill-icon {
+    min-width: 70px;
+    min-height: 70px;
+  }
+  .knowledge-item {
+    height: 23vh;
+  }
+  
+}
+
+/* Small Tablet */
+@media only screen and (max-width: 1000px){
+  #home-container {
+    font-size: 1.5vw;
+  }
+  .section {
+    font-size: 0.8em;
+  }
+  .item-container {
+    width: 65vw;
+  }
+  .knowledge-description {
+    padding-left: 1vw;
+  }
+}
+
+/* Very Small Screen */
+@media only screen and (max-width: 800px){
+  #home-container {
+    font-size: 1.7vw;
+  }
+  .section {
+    font-size: 1.5vw;
+  }
+  .item-container {
+    font-size: 2vw;
+    width: 80vw;
+    margin-right: 2em;
+  }
+  .skill-icon {
+    min-width: 8vw;
+    min-height: 8vw;
+  }
+  .knowledge-icon{
+    min-height: 3vw;
+    min-width: 3vw;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-height: 620px) {
+  #home-container {
+    font-size: 1vw;
+  }
+  .section {
+    font-size: 1.8vh;
+  }
+  .item-container {
+    font-size: 1.5vw;
+    width: 80vw;
+    margin-right: 2em;
+  }
+  .skill-icon {
+    min-width: 0;
+    min-height: 0;
+  }
+  .knowledge-icon{
+    min-height: 3vh;
+    min-width: 3vh;
+    margin: 0;
+  }
 }
