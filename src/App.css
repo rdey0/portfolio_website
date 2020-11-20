@@ -176,7 +176,7 @@
 }
 
 .item-container {
-  width: 40vw;
+  width: 50vw;
   margin: 0 5em 0 auto;
   display: flex;
   flex-direction: row;
@@ -578,11 +578,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
-  /*display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  overflow: hidden;
-  */
 }
 
 .project-card {
@@ -644,7 +639,7 @@
   width: 15vw;
   color: var(--text-color);
   font-size: 1.1em;
-  
+  margin: 1vh 0 0 0
 }
 
 @keyframes slide-up {
@@ -865,9 +860,7 @@
 
 /* Small Laptops and Large Tablets*/
 @media only screen and (max-width: 1350px) {
-  .item-container {
-    width: 50vw;
-  }
+
   .section {
     font-size: 0.9em;
   }
@@ -932,6 +925,7 @@
   }
 }
 
+/* Short Screens */
 @media only screen and (max-height: 620px) {
   #home-container {
     font-size: 1vw;
@@ -940,8 +934,8 @@
     font-size: 1.8vh;
   }
   .item-container {
-    font-size: 1.5vw;
-    width: 80vw;
+    font-size: calc(5px + 0.9vw);;
+    width: 75vw;
     margin-right: 2em;
   }
   .skill-icon {

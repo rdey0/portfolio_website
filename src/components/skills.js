@@ -1,61 +1,7 @@
 import React from 'react';
-import {FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaAngular} from 'react-icons/fa'
-import{SiJavascript} from 'react-icons/si'
-import {GiGears} from 'react-icons/gi'
-import {MdLaptop} from 'react-icons/md'
-import {BsTerminalFill} from 'react-icons/bs'
 import Reveal from 'react-reveal/Reveal';
-const skill_items = [
-    {
-        name: 'REACT',
-        icon: FaReact
-    },
-    {
-        name: 'NODE',
-        icon: FaNodeJs
-    },
-    {
-        name: 'JS ES6',
-        icon: SiJavascript
-    },
-    {
-        name: 'PYTHON 3',
-        icon: FaPython
-    },
-    {
-        name: 'HTML 5',
-        icon: FaHtml5
-    },
-    {
-        name: 'CSS 3',
-        icon: FaCss3Alt
-    },
-    {
-        name: 'ANGULAR',
-        icon: FaAngular
-    },
-];
-
-const knowledge_items = [
-    {
-        name: 'WEB DEVELOPMENT',
-        icon: MdLaptop,
-        description:`I enjoy creating interactive and stylish
-        web applications. If you like my website you'll like my work!`
-    },
-    {
-        name: 'API DEVELOPMENT',
-        icon: GiGears,
-        description:`I've created and hosted my own REST APIs. 
-        Much of such work was accomplished with Node.js and Heroku`
-    },
-    {
-        name: 'ALGORITHMS',
-        icon: BsTerminalFill,
-        description:`I'm no stranger to data structures and efficient algorithms. 
-        Check out my AI and computer vision projects!`
-    }
-];
+import skill_items from '../assets/skill_items.js'
+import knowledge_items from '../assets/knowledge_items.js'
 
 
 export default function Skills(){
