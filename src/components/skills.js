@@ -1,9 +1,9 @@
-import React from 'react';
-import Reveal from 'react-reveal/Reveal';
+import React from 'react'
+import Reveal from 'react-reveal/Reveal'
 import skill_items from '../assets/skill_items'
 import knowledge_items from '../assets/knowledge_items'
 import SectionTitle from './section_title'
-
+import SkillCard from './skill_card'
 export default function Skills(){
 
 
@@ -14,15 +14,7 @@ export default function Skills(){
                 <div id='skills'>
                     {
                         skill_items.map((skill, index)=>{
-                            var Icon = skill_items[index].icon;
-                            return(
-                                <Reveal effect='fade-slide-left'>
-                                    <div key={index} className='skill-item hidden'>
-                                        <Icon className='skill-icon'/>
-                                        <div className='skill-name'>{skill.name}</div>
-                                    </div>
-                                </Reveal>
-                            )
+                            return <SkillCard key={index} icon={skill_items[index].icon} name={skill.name}/>
                         })
                     }
                 </div>
