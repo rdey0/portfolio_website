@@ -2,6 +2,7 @@ import React from 'react';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import {MdLocationOn, MdEmail, MdSmartphone} from 'react-icons/md'
 import Reveal from 'react-reveal/Reveal';
+import SectionTitle from './section_title'
 export default class Contact extends React.Component{
     constructor(){
         super();
@@ -119,16 +120,11 @@ export default class Contact extends React.Component{
 
     }
 
-    //4822f734-bd4b-4bb2-bbd1-3452d1e56c38
 
     render(){
         return(
             <div id='contact-container' className='section'>
-                <Reveal effect='fade-slide-up' duration={1000}>
-                    <div className='hidden'>
-                        <h1 className='section-title'>CONTACT</h1>
-                    </div> 
-                </Reveal>
+                <SectionTitle text='CONTACT' justify='center'/>
                 <div id='contact-body'>
                         <Reveal effect='fade-slide-right'>
                             <div id='user-info-container' className='hidden'>

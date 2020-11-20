@@ -1,8 +1,8 @@
 import React from 'react';
 import Reveal from 'react-reveal/Reveal';
-import skill_items from '../assets/skill_items.js'
-import knowledge_items from '../assets/knowledge_items.js'
-
+import skill_items from '../assets/skill_items'
+import knowledge_items from '../assets/knowledge_items'
+import SectionTitle from './section_title'
 
 export default function Skills(){
 
@@ -10,11 +10,7 @@ export default function Skills(){
     return (
         <div id='skills-container' className='section'>
             <div id='skills-section'>
-                <Reveal effect='fade-slide-right'>
-                    <div className='hidden'>
-                        <h1 className='section-title-alt'>SKILLS</h1>
-                    </div>
-                </Reveal>
+                <SectionTitle text='SKILLS'/>
                 <div id='skills'>
                     {
                         skill_items.map((skill, index)=>{
@@ -33,11 +29,7 @@ export default function Skills(){
             </div>
 
             <div id='knowledge-section'>
-                <Reveal effect='fade-slide-right'>
-                    <div className='hidden'>
-                        <h1 className='section-title-alt'>KNOWLEDGE</h1>
-                    </div>  
-                </Reveal>
+                <SectionTitle text='KNOWLEDGE'/>
                 <div id='knowledge'>
                     {
                         knowledge_items.map((knowledge, index)=>{

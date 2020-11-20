@@ -3,7 +3,7 @@ import FlipMove from 'react-flip-move';
 import ProjectCard from './project_card.js'
 import Reveal from 'react-reveal/Reveal';
 import portfolio_items from '../assets/portfolio_items.js'
-
+import SectionTitle from './section_title'
 
 export default class Portfolio extends React.Component {
     constructor(props){
@@ -23,11 +23,7 @@ export default class Portfolio extends React.Component {
     render(){
         return(
             <div id='portfolio-container' className='section'>
-                <Reveal effect='fade-slide-up'>
-                    <div className='hidden'>
-                        <h1 className='section-title'>PORTFOLIO</h1>
-                    </div>
-                </Reveal>
+                <SectionTitle text='PORTFOLIO' justify='center'/>
                 <Reveal effect='fade-slide-up' duration={1000}>
                     <div id='portfolio-filters' className='no-interaction hidden'>
                         {

@@ -1,18 +1,14 @@
 import React from 'react';
 import me from '../images/me.png'
-
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import Reveal from 'react-reveal/Reveal';
+import SectionTitle from './section_title'
 
 export default function About() {
     
     return(
         <div id='about-container' className='section'>
-            <Reveal effect='fade-slide-up'>
-                <div className='hidden'>
-                    <h1 className='section-title'>ABOUT ME</h1>
-                </div>
-            </Reveal>
+            <SectionTitle text='ABOUT' justify='center'/>
             <Reveal effect='fade-slide-up'>
                 <div id='about-header-container' className='hidden'>
                     <p className='short-description'>
