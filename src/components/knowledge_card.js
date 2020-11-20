@@ -1,10 +1,12 @@
 import React from 'react'
+import Reveal from 'react-reveal/Reveal'
 
 export default function KnowledgeCard(props) {
+    var Icon = props.icon;
     return (
         <Reveal effect='fade-slide-left'>
             <div className='hidden'>
-                <div key={index} className='knowledge-item'>
+                <div className='knowledge-item'>
                     <div className='knowledge-header'>
                         <Icon className='knowledge-icon' />
                         <div className='knowledge-title'>{props.name}</div>

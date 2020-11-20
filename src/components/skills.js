@@ -4,6 +4,7 @@ import skill_items from '../assets/skill_items'
 import knowledge_items from '../assets/knowledge_items'
 import SectionTitle from './section_title'
 import SkillCard from './skill_card'
+import KnowledgeCard from './knowledge_card'
 export default function Skills(){
 
 
@@ -25,20 +26,8 @@ export default function Skills(){
                 <div id='knowledge'>
                     {
                         knowledge_items.map((knowledge, index)=>{
-                            var Icon = knowledge.icon;
-                            return(
-                                <Reveal effect='fade-slide-left'>
-                                    <div className='hidden'>
-                                        <div key={index} className='knowledge-item'>
-                                            <div className='knowledge-header'>
-                                                <Icon className='knowledge-icon' />
-                                                <div className='knowledge-title'>{knowledge.name}</div>
-                                            </div>
-                                            <div className='knowledge-description'>{knowledge.description}</div>
-                                        </div>
-                                    </div>
-                                </Reveal>
-                            )
+                            return <KnowledgeCard key={index} 
+                                icon={knowledge.icon} name={knowledge.name} description={knowledge.description}/>
                         })
                     }
                 </div>
