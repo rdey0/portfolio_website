@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 //Hide navbar when scrolling down and show when scrolling up
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -15,10 +13,6 @@ window.onscroll = function() {
 }
 
 export default class NavBar extends React.Component{
-    constructor(){
-        super();
-    }
-
     // Scroll to whatever section was clicked on
     handle_click=(event)=> {
         var selected_section = event.target.innerText;
@@ -36,7 +30,7 @@ export default class NavBar extends React.Component{
                 <div id='navbar-container'>
                     <div className='item-container no-interaction'>
                         <div className='navbar-item' onClick={this.handle_click}>HOME</div>
-                        <div className='navbar-item'>RESUME</div>
+                        <a className='navbar-item'>RESUME</a>
                         <div className='navbar-item' onClick={this.handle_click}>ABOUT</div>
                         <div className='navbar-item' onClick={this.handle_click}>SKILLS</div>
                         <div className='navbar-item' onClick={this.handle_click}>PORTFOLIO</div>
