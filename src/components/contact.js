@@ -3,6 +3,7 @@ import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import {MdLocationOn, MdEmail, MdSmartphone} from 'react-icons/md'
 import Reveal from 'react-reveal/Reveal';
 import SectionTitle from './section_title'
+
 export default class Contact extends React.Component{
     constructor(){
         super();
@@ -11,6 +12,8 @@ export default class Contact extends React.Component{
             email: '',
             subject: '',
             message: '',
+            button_content: 'SEND',
+            error_message: '',
             errored_elements: {
                 name: false,
                 email: false,
@@ -53,6 +56,7 @@ export default class Contact extends React.Component{
         var updated_text = event.target.value;
         var new_errored_state = this.state.errored_elements;
         var new_state = {
+            button_content: 'SEND',
             errored_elements: new_errored_state
         };
         new_state[field_id] = updated_text;
@@ -99,6 +103,12 @@ export default class Contact extends React.Component{
     // Check if required fields have been filled then send me an email
     handle_form_submit=()=> {
         if(this.can_submit){
+            // change button content to notify user that the form is being sent
+            this.setState({
+                button_content: 'SENDING...',
+                error_message: ''
+            });
+            // send email via smtpjs
             window.Email.send({
                 SecureToken: '010b08c2-294b-41b8-bf57-2d8e35a0f95d',
                 To: 'roydey10@gmail.com',
@@ -106,15 +116,23 @@ export default class Contact extends React.Component{
                 Subject: this.state.subject,
                 Body: `${this.state.name} from ${this.state.email} says \n ${this.state.message}`
             }).then(response=>{
-                console.log(response);
-                // clear input fields upon successful submit
+                // On successful submit, clear input fields, change button text to DELIVERED
+                // and prevent submission
                 this.setState({
                     name: '',
                     email: '',
                     subject: '',
-                    message: ''
+                    message: '',
+                    can_submit: false,
+                    button_content: 'DELIVERED'
                 });
-            })
+            }).catch((error) =>{
+                // On error, reset button content to SEND tell the user to retry submission
+                this.setState({
+                    button_content: 'SEND',
+                    error_message:`Sorry, Sending Failed, Please Try Again`
+                })
+            });
         }
         
 
@@ -126,37 +144,41 @@ export default class Contact extends React.Component{
             <div id='contact-container' className='section'>
                 <SectionTitle text='CONTACT' justify='center'/>
                 <div id='contact-body'>
+                        
                         <Reveal effect='fade-slide-right'>
                             <div id='user-info-container' className='hidden'>
-                                    <div className='inline-container'>
-                                        <input id='name' 
-                                            placeholder='Name*' 
-                                            value={this.state.name} 
-                                            onChange={this.handle_field_change}  
-                                            onBlur={this.handle_on_blur} 
-                                            className={`input-field-small input-small ${this.is_errored('name')?'errored':''}`}></input>
-                                        <input id='email' 
-                                            placeholder='Email*' 
-                                            value={this.state.email}  
-                                            onChange={this.handle_field_change}  
-                                            onBlur={this.handle_on_blur} 
-                                            className={`input-field-small input-small ${this.is_errored('email')?'errored':''}`}></input>
+                                <div className='inline-container'>
+                                    <input id='name' 
+                                        placeholder='Name*' 
+                                        value={this.state.name} 
+                                        onChange={this.handle_field_change}  
+                                        onBlur={this.handle_on_blur} 
+                                        className={`input-field-small input-small ${this.is_errored('name')?'errored':''}`}></input>
+                                    <input id='email' 
+                                        placeholder='Email*' 
+                                        value={this.state.email}  
+                                        onChange={this.handle_field_change}  
+                                        onBlur={this.handle_on_blur} 
+                                        className={`input-field-small input-small ${this.is_errored('email')?'errored':''}`}></input>
+                                </div>
+                                <input id='subject' 
+                                    placeholder='Subject*' 
+                                    value={this.state.subject}  
+                                    onChange={this.handle_field_change}  
+                                    onBlur={this.handle_on_blur} 
+                                    className={`input-field-small input ${this.is_errored('subject')?'errored':''}`}></input>
+                                <textarea id='message' 
+                                    placeholder='Message*' 
+                                    value={this.state.message}  
+                                    onChange={this.handle_field_change}  
+                                    onBlur={this.handle_on_blur} 
+                                    className={`input-field-large input ${this.is_errored('message')?'errored':''}`}></textarea>
+                                <div className='button-container'>
+                                    <div className={this.state.can_submit ? 'button' : 'disabled-button no-interaction'} onClick={this.handle_form_submit}>
+                                        {this.state.button_content}
                                     </div>
-                                    <input id='subject' 
-                                        placeholder='Subject*' 
-                                        value={this.state.subject}  
-                                        onChange={this.handle_field_change}  
-                                        onBlur={this.handle_on_blur} 
-                                        className={`input-field-small input ${this.is_errored('subject')?'errored':''}`}></input>
-                                    <textarea id='message' 
-                                        placeholder='Message*' 
-                                        value={this.state.message}  
-                                        onChange={this.handle_field_change}  
-                                        onBlur={this.handle_on_blur} 
-                                        className={`input-field-large input ${this.is_errored('message')?'errored':''}`}></textarea>
-                                    <div className='button-container'>
-                                        <div className={this.state.can_submit ? 'button' : 'disabled-button no-interaction'} onClick={this.handle_form_submit}>SEND</div>
-                                    </div>  
+                                    <div id='error-message'>{this.state.error_message}</div>  
+                                </div>
                             </div>
                         </Reveal>
                     
