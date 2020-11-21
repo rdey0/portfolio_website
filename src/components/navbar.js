@@ -1,5 +1,5 @@
 import React from 'react'
-
+import resume from '../resume/Roy Dey Resume.pdf'
 //Hide navbar when scrolling down and show when scrolling up
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -30,7 +30,9 @@ export default class NavBar extends React.Component{
                 <div id='navbar-container'>
                     <div className='item-container no-interaction'>
                         <div className='navbar-item' onClick={this.handle_click}>HOME</div>
-                        <a className='navbar-item'>RESUME</a>
+                        <a href={resume}
+                            target='_blank' 
+                            rel='noopener noreferrer'className='navbar-item'>RESUME</a>
                         <div className='navbar-item' onClick={this.handle_click}>ABOUT</div>
                         <div className='navbar-item' onClick={this.handle_click}>SKILLS</div>
                         <div className='navbar-item' onClick={this.handle_click}>PORTFOLIO</div>
