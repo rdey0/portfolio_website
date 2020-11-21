@@ -612,7 +612,7 @@
 
 .project-overlay:hover{
   transition: 0.2s;
-  opacity: 85%;
+  opacity: 0.85;
 }
 
 .project-overlay:hover > .project-title{
@@ -638,7 +638,7 @@
 }
 
 .project-description {
-  opacity: 0%;
+  opacity: 0;
   width: 15vw;
   color: var(--text-color);
   font-size: 1.1em;
