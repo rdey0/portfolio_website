@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio_website/static/css/main.c68defaa.chunk.css",
+    "main.js": "/portfolio_website/static/js/main.cbc26a49.chunk.js",
+    "main.js.map": "/portfolio_website/static/js/main.cbc26a49.chunk.js.map",
+    "runtime-main.js": "/portfolio_website/static/js/runtime-main.0f007693.js",
+    "runtime-main.js.map": "/portfolio_website/static/js/runtime-main.0f007693.js.map",
+    "static/js/2.cc2a3be4.chunk.js": "/portfolio_website/static/js/2.cc2a3be4.chunk.js",
+    "static/js/2.cc2a3be4.chunk.js.map": "/portfolio_website/static/js/2.cc2a3be4.chunk.js.map",
+    "static/js/3.6d56d6a3.chunk.js": "/portfolio_website/static/js/3.6d56d6a3.chunk.js",
+    "static/js/3.6d56d6a3.chunk.js.map": "/portfolio_website/static/js/3.6d56d6a3.chunk.js.map",
+    "index.html": "/portfolio_website/index.html",
+    "static/css/main.c68defaa.chunk.css.map": "/portfolio_website/static/css/main.c68defaa.chunk.css.map",
+    "static/js/2.cc2a3be4.chunk.js.LICENSE.txt": "/portfolio_website/static/js/2.cc2a3be4.chunk.js.LICENSE.txt",
+    "static/media/Roy Dey Resume.fe397c61.pdf": "/portfolio_website/static/media/Roy Dey Resume.fe397c61.pdf",
+    "static/media/cancer_classifier_pf.b4a05b59.PNG": "/portfolio_website/static/media/cancer_classifier_pf.b4a05b59.PNG",
+    "static/media/connect4_pf.4bb1a9bf.PNG": "/portfolio_website/static/media/connect4_pf.4bb1a9bf.PNG",
+    "static/media/image_resizer_pf.88f87090.png": "/portfolio_website/static/media/image_resizer_pf.88f87090.png",
+    "static/media/me.a418a644.png": "/portfolio_website/static/media/me.a418a644.png",
+    "static/media/panorama_pf.87b04c5f.png": "/portfolio_website/static/media/panorama_pf.87b04c5f.png",
+    "static/media/App.css": "/portfolio_website/static/media/project_overlay_background.13dd35e7.png",
+    "static/media/raphunt_pf.9b34c85f.PNG": "/portfolio_website/static/media/raphunt_pf.9b34c85f.PNG",
+    "static/media/reverse_img_search_pf.339ff100.png": "/portfolio_website/static/media/reverse_img_search_pf.339ff100.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0f007693.js",
+    "static/js/2.cc2a3be4.chunk.js",
+    "static/css/main.c68defaa.chunk.css",
+    "static/js/main.cbc26a49.chunk.js"
+  ]
+}
