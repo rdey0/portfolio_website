@@ -617,6 +617,8 @@
 
 .project-overlay:hover > .project-title{
   animation: fadeIn ease 0.4s, slide-up 0.4s ease;
+  -webkit-animation: fadeIn ease 0.4s, slide-up 0.4s ease;
+  -moz-animation: fadeIn ease 0.4s, slide-up 0.4s ease;
 }
 
 .project-overlay:hover > .project-description{
@@ -644,6 +646,11 @@
 }
 
 @keyframes slide-up {
+  0% {transform: translateY(5vh);}
+  100% {transform: translateY(0);}
+}
+
+@-moz-keyframes slide-up {
   0% {transform: translateY(5vh);}
   100% {transform: translateY(0);}
 }
