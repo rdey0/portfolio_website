@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/roydey/static/css/main.8ed34700.chunk.css",
-    "main.js": "/roydey/static/js/main.cbc26a49.chunk.js",
-    "main.js.map": "/roydey/static/js/main.cbc26a49.chunk.js.map",
+    "main.js": "/roydey/static/js/main.3567c6c2.chunk.js",
+    "main.js.map": "/roydey/static/js/main.3567c6c2.chunk.js.map",
     "runtime-main.js": "/roydey/static/js/runtime-main.29de3c8e.js",
     "runtime-main.js.map": "/roydey/static/js/runtime-main.29de3c8e.js.map",
     "static/js/2.cc2a3be4.chunk.js": "/roydey/static/js/2.cc2a3be4.chunk.js",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.29de3c8e.js",
     "static/js/2.cc2a3be4.chunk.js",
     "static/css/main.8ed34700.chunk.css",
-    "static/js/main.cbc26a49.chunk.js"
+    "static/js/main.3567c6c2.chunk.js"
   ]
 }
