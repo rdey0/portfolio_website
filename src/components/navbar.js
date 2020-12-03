@@ -1,5 +1,5 @@
 import React from 'react'
-import resume from '../resume/Roy Dey Resume.pdf'
+import resume from '../resume/Roy Dey - Resume.pdf'
 //Hide navbar when scrolling down and show when scrolling up
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
