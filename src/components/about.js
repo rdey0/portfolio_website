@@ -31,11 +31,11 @@ export default function About() {
                                 <p id='body-long-description'>
                                     I'm a UC Davis computer science graduate with an interest in full stack development and
                                     artificial intelligence. When I'm not working on my passion projects, I enjoy weightlifting, 
-                                    biking, and staying up to date on the latest hip hop releases
+                                    biking, and staying up to date on the latest hip hop releases.
                                     <br/>
                                     <br/>
                                     I'm currently searching for a software development position so if
-                                    my portfolio piques your interest and you're hiring, give me a shout
+                                    my portfolio piques your interest and you're hiring, give me a shout.
                                     
                                 </p>
                                 <div id='about-my-info'>

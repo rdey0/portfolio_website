@@ -13,7 +13,7 @@ const knowledge_items = [
         name: 'API DEVELOPMENT',
         icon: GiGears,
         description:`I've created and hosted my own REST APIs. 
-        Much of such work was accomplished with Node.js and Heroku`
+        Much of such work was accomplished with Node.js and Heroku.`
     },
     {
         name: 'ALGORITHMS',
