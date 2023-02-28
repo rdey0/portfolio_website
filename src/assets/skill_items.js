@@ -1,35 +1,37 @@
-import {FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaAngular} from 'react-icons/fa'
-import{SiJavascript} from 'react-icons/si'
+import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaAngular } from 'react-icons/fa'
+import { SiJavascript, SiDjango, SiPostgresql, SiGraphql } from 'react-icons/si'
 
 const skill_items = [
+
+    {
+        name: 'DJANGO',
+        icon: SiDjango
+    },
     {
         name: 'REACT',
         icon: FaReact
-    },
-    {
-        name: 'NODE',
-        icon: FaNodeJs
-    },
-    {
-        name: 'JS ES6',
-        icon: SiJavascript
     },
     {
         name: 'PYTHON 3',
         icon: FaPython
     },
     {
-        name: 'HTML 5',
-        icon: FaHtml5
+        name: 'GRAPHQL',
+        icon: SiGraphql
     },
     {
-        name: 'CSS 3',
-        icon: FaCss3Alt
+        name: 'POSTGRESQL',
+        icon: SiPostgresql
     },
     {
-        name: 'ANGULAR',
-        icon: FaAngular
-    }
+        name: 'JS ES6',
+        icon: SiJavascript
+    },
+    {
+        name: 'NODE',
+        icon: FaNodeJs
+    },
+
 ];
 
 export default skill_items;

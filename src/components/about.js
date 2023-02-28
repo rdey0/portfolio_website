@@ -29,7 +29,7 @@ export default function About() {
                             <div id='about-body' className='hidden'>
                                 <div id='about-body-title'> Hi There</div>
                                 <p id='body-long-description'>
-                                    I'm a full stack engineer with experience working the freight forwarding industry to deliver clean UIs and robust server-side logic.
+                                    I'm a full stack engineer with experience working in the freight forwarding industry to deliver clean UIs and robust software systems.
                                     When I'm not working on my passion projects, I enjoy weightlifting,
                                     running, and staying up to date on the latest hip hop releases.
                                     <br />
