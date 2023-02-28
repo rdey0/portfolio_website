@@ -18,7 +18,7 @@ const knowledge_items = [
         name: 'SYSTEM DESIGN',
         icon: BsTerminalFill,
         description: `I've developed performant and 
-        scalable software systems for quoting and purchase orders systems.`
+        scalable software systems for quoting and purchase order systems.`
     }
 ];
 

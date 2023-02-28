@@ -12,7 +12,7 @@ const particle_params = {
         },
         "size": {
             "value": 3,
-            "random":{
+            "random": {
                 "enable": true,
                 "minimumValue": 1,
             }
@@ -22,11 +22,11 @@ const particle_params = {
             "color": "#000000",
             "enable": true
         },
-        "value":10
+        "value": 10
     },
     "interactivity": {
         "events": {
-            "onclick":{
+            "onclick": {
                 "enable": true,
                 "mode": "push"
             },
@@ -34,8 +34,8 @@ const particle_params = {
                 "enable": true,
                 "mode": "repulse"
             },
-            "modes":{
-                "repulse":{
+            "modes": {
+                "repulse": {
                     "distance": 20000,
                     "duration": 0.4,
                     "speed": 1
@@ -45,17 +45,17 @@ const particle_params = {
     }
 }
 
-export default function Homepage(props){
-    return(
-        <div id='home-container'> 
-            <Particles id='particle-layer' width='100vw' height='100vh' params={particle_params}/>
+export default function Homepage(props) {
+    return (
+        <div id='home-container'>
+            <Particles id='particle-layer' width='100vw' height='100vh' params={particle_params} />
             <div className='home-content no-interaction'>
                 <h1 className='home-title'>Hi, I'm Roy Dey</h1>
                 <div className='descriptors-container'>
-                    <div className='descriptors'>Full Stack Developer / Designer / Engineer</div>
+                    <div className='descriptors'>Full Stack Developer / Engineer / Designer</div>
                 </div>
             </div>
         </div>
-        
+
     )
 }
