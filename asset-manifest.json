@@ -1,31 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.90b0269e.chunk.css",
-    "main.js": "/static/js/main.98df9d89.chunk.js",
-    "main.js.map": "/static/js/main.98df9d89.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6eed673b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6eed673b.js.map",
-    "static/js/2.0ce3292d.chunk.js": "/static/js/2.0ce3292d.chunk.js",
-    "static/js/2.0ce3292d.chunk.js.map": "/static/js/2.0ce3292d.chunk.js.map",
-    "static/js/3.6d56d6a3.chunk.js": "/static/js/3.6d56d6a3.chunk.js",
-    "static/js/3.6d56d6a3.chunk.js.map": "/static/js/3.6d56d6a3.chunk.js.map",
+    "main.css": "/static/css/main.918cc0de.css",
+    "main.js": "/static/js/main.7c6e3948.js",
+    "static/js/377.37397ce1.chunk.js": "/static/js/377.37397ce1.chunk.js",
+    "static/media/image_resizer_pf.png": "/static/media/image_resizer_pf.88f870902aa5d28b686e.png",
+    "static/media/reverse_img_search_pf.png": "/static/media/reverse_img_search_pf.339ff1006247b796b004.png",
+    "static/media/panorama_pf.png": "/static/media/panorama_pf.87b04c5f54c626fb8343.png",
+    "static/media/raphunt_pf.PNG": "/static/media/raphunt_pf.9b34c85f776f395fbb54.PNG",
+    "static/media/cancer_classifier_pf.PNG": "/static/media/cancer_classifier_pf.b4a05b5938af656bae2f.PNG",
+    "static/media/Roy Dey Resume.pdf": "/static/media/Roy Dey Resume.ef03b70ce32f220a0501.pdf",
+    "static/media/connect4_pf.PNG": "/static/media/connect4_pf.4bb1a9bfb910df795d6f.PNG",
+    "static/media/me.png": "/static/media/me.a418a6448796019f8166.png",
+    "static/media/project_overlay_background.png": "/static/media/project_overlay_background.13dd35e7b66c16f60da0.png",
     "index.html": "/index.html",
-    "static/css/main.90b0269e.chunk.css.map": "/static/css/main.90b0269e.chunk.css.map",
-    "static/js/2.0ce3292d.chunk.js.LICENSE.txt": "/static/js/2.0ce3292d.chunk.js.LICENSE.txt",
-    "static/media/Roy Dey - Resume.a55bfb8a.pdf": "/static/media/Roy Dey - Resume.a55bfb8a.pdf",
-    "static/media/cancer_classifier_pf.b4a05b59.PNG": "/static/media/cancer_classifier_pf.b4a05b59.PNG",
-    "static/media/connect4_pf.4bb1a9bf.PNG": "/static/media/connect4_pf.4bb1a9bf.PNG",
-    "static/media/image_resizer_pf.88f87090.png": "/static/media/image_resizer_pf.88f87090.png",
-    "static/media/me.a418a644.png": "/static/media/me.a418a644.png",
-    "static/media/panorama_pf.87b04c5f.png": "/static/media/panorama_pf.87b04c5f.png",
-    "static/media/App.css": "/static/media/project_overlay_background.13dd35e7.png",
-    "static/media/raphunt_pf.9b34c85f.PNG": "/static/media/raphunt_pf.9b34c85f.PNG",
-    "static/media/reverse_img_search_pf.339ff100.png": "/static/media/reverse_img_search_pf.339ff100.png"
+    "main.918cc0de.css.map": "/static/css/main.918cc0de.css.map",
+    "main.7c6e3948.js.map": "/static/js/main.7c6e3948.js.map",
+    "377.37397ce1.chunk.js.map": "/static/js/377.37397ce1.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.6eed673b.js",
-    "static/js/2.0ce3292d.chunk.js",
-    "static/css/main.90b0269e.chunk.css",
-    "static/js/main.98df9d89.chunk.js"
+    "static/css/main.918cc0de.css",
+    "static/js/main.7c6e3948.js"
   ]
 }
