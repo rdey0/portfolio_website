@@ -29,12 +29,14 @@ export default function About() {
                             <div id='about-body' className='hidden'>
                                 <div id='about-body-title'> Hi There</div>
                                 <p id='body-long-description'>
-                                    I'm a full stack engineer with experience working in the freight forwarding industry to deliver clean UIs and robust software systems.
-                                    When I'm not working on my passion projects, I enjoy weightlifting,
-                                    running, and staying up to date on the latest hip hop releases.
+                                    I'm a fullstack engineer with experience building robust and
+                                    scalable web/mobile applications using Python, Django, Postgres, and React.
+                                    At SILQ, a freight forwarding startup, I developed the client web app as
+                                    well as systems to generate freighting quotes and track purchased goods.
+
                                     <br />
                                     <br />
-                                    I'm currently searching for a software development position so if
+                                    I'm currently searching for a software engineering position so if
                                     my portfolio piques your interest and you're hiring, give me a shout.
 
                                 </p>
@@ -48,8 +50,8 @@ export default function About() {
                                         <div className='about-info-content'>roydey10@gmail.com</div>
                                     </div>
                                     <div className='about-info-item'>
-                                        <div className='about-info-title'>Phone:</div>
-                                        <div className='about-info-content'>+1 (408) 413-7941</div>
+                                        <div className='about-info-title'>Location:</div>
+                                        <div className='about-info-content'>San Jose, CA</div>
                                     </div>
                                     <div className='about-info-item'>
                                         <div className='about-info-title'>Socials:</div>
