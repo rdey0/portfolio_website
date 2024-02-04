@@ -20,8 +20,9 @@ export default class NavBar extends React.Component {
         var element = document.getElementById(section_id);
         element.scrollIntoView({
             behavior: 'smooth',
-            block: 'nearest'
+            block: 'start'
         });
+
     }
 
     render() {
