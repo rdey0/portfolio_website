@@ -26,7 +26,7 @@ const portfolio_items = [
         name: 'RESTOCK BOT',
         description: 'Get email alerts when desired tech gadgets come back in stock',
         img_src: restock_bot,
-        link: 'https://rdey0.github.io/restock-bot/',
+        link: 'https://github.com/rdey0/restock-bot',
         filter_tags: ['ALL', 'ALGORITHMIC', 'BACK END']
     },
     {
