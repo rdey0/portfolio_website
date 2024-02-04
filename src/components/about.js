@@ -29,10 +29,10 @@ export default function About() {
                             <div id='about-body' className='hidden'>
                                 <div id='about-body-title'> Hi There</div>
                                 <p id='body-long-description'>
-                                    I'm a fullstack engineer with experience building robust and
+                                    I'm a software engineer with experience building robust and
                                     scalable web/mobile applications using Python, Django, Postgres, and React.
-                                    At SILQ, a freight forwarding startup, I developed the client web app as
-                                    well as systems to generate freighting quotes and track purchased goods.
+                                    At SILQ, a freight forwarding startup, I developed their client web app and
+                                    systems to generate freighting quotes and track purchased goods.
 
                                     <br />
                                     <br />
@@ -51,7 +51,7 @@ export default function About() {
                                     </div>
                                     <div className='about-info-item'>
                                         <div className='about-info-title'>Location:</div>
-                                        <div className='about-info-content'>San Jose, CA</div>
+                                        <div className='about-info-content'>SF Bay Area, CA</div>
                                     </div>
                                     <div className='about-info-item'>
                                         <div className='about-info-title'>Socials:</div>
