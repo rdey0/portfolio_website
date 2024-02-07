@@ -52,7 +52,7 @@ export default function Homepage(props) {
             <div className='home-content no-interaction'>
                 <h1 className='home-title'>Hi, I'm Roy Dey</h1>
                 <div className='descriptors-container'>
-                    <div className='descriptors'>Software Engineer / Builder / Problem Solver</div>
+                    <div className='descriptors'>Fullstack Software Engineer / Designer / Creator</div>
                 </div>
             </div>
         </div>

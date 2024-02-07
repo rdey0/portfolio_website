@@ -11,9 +11,9 @@ export default function About() {
             <SectionTitle text='ABOUT' justify='center' />
             <Reveal effect='fade-slide-up'>
                 <div id='about-header-container' className='hidden'>
-                    <p className='short-description'>
+                    {/* <p className='short-description'>
                         I'm a passionate developer who enjoys all aspects of the process, front end and back.
-                    </p>
+                    </p> */}
                     <div className='bottom-border-container'></div>
                 </div>
             </Reveal>
@@ -32,12 +32,12 @@ export default function About() {
                                     I'm a software engineer with experience building robust and
                                     scalable web/mobile applications using Python, Django, Postgres, and React.
                                     At SILQ, a freight forwarding startup, I developed their client web app and
-                                    systems to generate freighting quotes and track purchased goods.
+                                    backend systems to generate freighting quotes and track purchased goods.
 
                                     <br />
                                     <br />
                                     I'm currently searching for a software engineering position so if
-                                    my portfolio piques your interest and you're hiring, give me a shout.
+                                    my portfolio piques your interest and you're hiring, give me a shout!
 
                                 </p>
                                 <div id='about-my-info'>
