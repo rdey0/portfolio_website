@@ -1,24 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.13305a4c.css",
-    "main.js": "/static/js/main.e4c3a88d.js",
+    "main.js": "/static/js/main.440585d3.js",
     "static/js/377.37397ce1.chunk.js": "/static/js/377.37397ce1.chunk.js",
-    "static/media/reverse_img_search_pf.png": "/static/media/reverse_img_search_pf.339ff1006247b796b004.png",
-    "static/media/panorama_pf.png": "/static/media/panorama_pf.87b04c5f54c626fb8343.png",
+    "static/media/jot.svg": "/static/media/jot.9419373de8a737604eca559a083f8b92.svg",
     "static/media/raphunt_pf.PNG": "/static/media/raphunt_pf.9b34c85f776f395fbb54.PNG",
     "static/media/cancer_classifier_pf.PNG": "/static/media/cancer_classifier_pf.b4a05b5938af656bae2f.PNG",
-    "static/media/Roy Dey Resume.pdf": "/static/media/Roy Dey Resume.e79ac691de960451f598.pdf",
+    "static/media/Roy Dey Resume.pdf": "/static/media/Roy Dey Resume.191269e19d8ffe337d5e.pdf",
     "static/media/connect4_pf.PNG": "/static/media/connect4_pf.4bb1a9bfb910df795d6f.PNG",
     "static/media/me.png": "/static/media/me.a418a6448796019f8166.png",
     "static/media/project_overlay_background.png": "/static/media/project_overlay_background.13dd35e7b66c16f60da0.png",
     "static/media/restock_bot.png": "/static/media/restock_bot.21606fd48d77032803df.png",
     "index.html": "/index.html",
     "main.13305a4c.css.map": "/static/css/main.13305a4c.css.map",
-    "main.e4c3a88d.js.map": "/static/js/main.e4c3a88d.js.map",
+    "main.440585d3.js.map": "/static/js/main.440585d3.js.map",
     "377.37397ce1.chunk.js.map": "/static/js/377.37397ce1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.13305a4c.css",
-    "static/js/main.e4c3a88d.js"
+    "static/js/main.440585d3.js"
   ]
 }
