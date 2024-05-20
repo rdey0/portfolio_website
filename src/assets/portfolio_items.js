@@ -1,13 +1,18 @@
 
-import raphunt_img from '../images/raphunt_pf.PNG'
-import connect4_img from '../images/connect4_pf.PNG'
-import restock_bot from '../images/restock_bot.png'
 import cancer_img from '../images/cancer_classifier_pf.PNG'
-import reverse_img from '../images/reverse_img_search_pf.png'
-import panorama_img from '../images/panorama_pf.png'
-
+import connect4_img from '../images/connect4_pf.PNG'
+import jot_svg from '../images/jot.svg'
+import raphunt_img from '../images/raphunt_pf.PNG'
+import restock_bot from '../images/restock_bot.png'
 
 const portfolio_items = [
+    {
+        name: 'JOT',
+        description: 'A streamlined note taking and journaling app with a focus on simplicity and speed',
+        img_src: jot_svg,
+        link: 'https://jot-note-app.github.io/Client/',
+        filter_tags: ['ALL', 'WEB APPS', 'BACK END']
+    },
     {
         name: 'RAPHUNT',
         description: 'Gathers new hip hop song releases and displays their streaming links',
@@ -36,20 +41,20 @@ const portfolio_items = [
         link: 'https://rdey0.github.io/cancer_classifier/',
         filter_tags: ['ALL', 'WEB APPS', 'ALGORITHMIC', 'BACK END']
     },
-    {
-        name: 'REVERSE IMAGE SEARCH',
-        description: 'Finds the closest matching images in an image bank when given a query image',
-        img_src: reverse_img,
-        link: 'https://github.com/rdey0/reverse_image_search',
-        filter_tags: ['ALL', 'ALGORITHMIC']
-    },
-    {
-        name: 'PANORAMIC STITCHER',
-        description: 'Creates a panoramic, angle corrected photo using a set of overlapping images',
-        img_src: panorama_img,
-        link: 'https://github.com/rdey0/panoramic_stitcher',
-        filter_tags: ['ALL', 'ALGORITHMIC']
-    },
+    // {
+    //     name: 'REVERSE IMAGE SEARCH',
+    //     description: 'Finds the closest matching images in an image bank when given a query image',
+    //     img_src: reverse_img,
+    //     link: 'https://github.com/rdey0/reverse_image_search',
+    //     filter_tags: ['ALL', 'ALGORITHMIC']
+    // },
+    // {
+    //     name: 'PANORAMIC STITCHER',
+    //     description: 'Creates a panoramic, angle corrected photo using a set of overlapping images',
+    //     img_src: panorama_img,
+    //     link: 'https://github.com/rdey0/panoramic_stitcher',
+    //     filter_tags: ['ALL', 'ALGORITHMIC']
+    // },
 
 ];
 
